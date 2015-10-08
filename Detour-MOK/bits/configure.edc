@@ -1,0 +1,89 @@
+
+group {
+    name: "e/widgets/configure/main";
+
+    parts {
+        part {
+            name: "dialog_bg";
+            type: IMAGE;
+            mouse_events: 0;
+            description {
+                state: "default" 0.0;
+                image.normal: "images/dialog_im0.png";
+                image.border: 0 0 3 1;
+				color_class: "dialog_base";
+            }
+        }
+
+		part {
+            name: "dialog_bg2";
+            type: RECT;
+            mouse_events: 0;
+
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 20;
+			}
+		}
+
+        part {
+            name: "e.swallow.content";
+            type: SWALLOW;
+            description {
+                state: "default" 0.0;
+                min: 299 341;
+                rel1 { 
+                    /* to: "gradient";  */
+                    relative: 0.0 0.0; 
+                    offset: 4 4; 
+                }
+                rel2 { 
+                    to: "button.area"; 
+                    relative: 1.0 0.0;
+                    offset: -4 -6; 
+                }
+            }
+        }
+
+        part {
+            name: "button.area";
+            type: RECT;
+            mouse_events: 0;
+            description {
+                state: "default" 0.0;
+                min: 299 30;
+				fixed: 1 1;
+                color: 255 0 0 0;
+                rel1 { 
+                    /* to: "gradient";  */
+                    relative: 0.0 1.0; 
+                    offset: 0 0; 
+                }
+                rel2 { 
+                    /* to: "gradient";  */
+                    relative: 1.0 1.0; 
+                    offset: 0 -41; 
+                }
+            }
+        }
+
+        part {
+            name: "e.swallow.button";
+            type: SWALLOW;
+            description {
+                state: "default" 0.0;
+                fixed: 1 1;
+                rel1 { 
+                    to: "button.area"; 
+                    relative: 0.5 0.5; 
+                    offset: 0 0; 
+                }
+                rel2 { 
+                    to: "button.area"; 
+                    relative: 0.5 0.5; 
+                    offset: 0 -5; 
+                }	     	    
+            }
+        }
+    }	   
+}

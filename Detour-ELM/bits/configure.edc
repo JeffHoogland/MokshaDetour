@@ -1,0 +1,141 @@
+
+group {
+    name: "e/widgets/configure/main";
+
+    parts {
+        part {
+            name: "dialog_bg";
+            type: IMAGE;
+            mouse_events: 0;
+            description {
+                state: "default" 0.0;
+                image.normal: "images/dialog_im0.png";
+                image.border: 0 0 3 1;
+				color_class: "dialog_base";
+            }
+        }
+
+		part {
+            name: "dialog_bg2";
+            type: RECT;
+            mouse_events: 0;
+
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 20;
+			}
+		}
+
+        part {
+            name: "e.swallow.content";
+            type: SWALLOW;
+            description {
+                state: "default" 0.0;
+                min: 299 341;
+                rel1 { 
+                    /* to: "gradient";  */
+                    relative: 0.0 0.0; 
+                    offset: 4 4; 
+                }
+                rel2 { 
+                    to: "button.area"; 
+                    relative: 1.0 0.0;
+                    offset: -4 -6; 
+                }
+            }
+        }
+
+        part {
+            name: "button.area";
+            type: RECT;
+            mouse_events: 0;
+            description {
+                state: "default" 0.0;
+                min: 299 30;
+				fixed: 1 1;
+                color: 255 0 0 0;
+                rel1 { 
+                    /* to: "gradient";  */
+                    relative: 0.0 1.0; 
+                    offset: 0 0; 
+                }
+                rel2 { 
+                    /* to: "gradient";  */
+                    relative: 1.0 1.0; 
+                    offset: 0 -41; 
+                }
+            }
+        }
+
+        part {
+            name: "e.swallow.button";
+            type: SWALLOW;
+            description {
+                state: "default" 0.0;
+                fixed: 1 1;
+                rel1 { 
+                    to: "button.area"; 
+                    relative: 0.5 0.5; 
+                    offset: 0 0; 
+                }
+                rel2 { 
+                    to: "button.area"; 
+                    relative: 0.5 0.5; 
+                    offset: 0 -5; 
+                }	     	    
+            }
+        }
+    }	   
+}
+
+group { name: "e/modules/conf/main";
+   images.image: "images/icon_spanner-sys.png" COMP;
+   //min: 16 16;
+   //max: 80 80;
+   parts {
+      part { name: "base";
+         description { state: "default" 0.0;
+            image.normal: "images/icon_spanner-sys.png";
+			color: 59 59 59 255;
+            aspect: 1.0 1.0; aspect_preference: BOTH;
+         }
+         description { state: "hilight" 0.0;
+			inherit: "default" 0.0;
+			//image.normal: "images/icon_system-shutdown-sys.png";
+			color: 135 169 224 255;
+			//color3: 0 0 0 128;
+         }
+         description { state: "clicked" 0.0;
+            inherit: "default" 0.0;
+            //image.normal: "images/icon_system-shutdown-sys.png";
+            color: 33 44 67 255;
+         }
+      }
+   }
+   programs {
+      program {
+         signal: "mouse,down,1"; source: "base";
+         action: STATE_SET "clicked" 0.0;
+         target: "base";
+      }
+      program {
+         signal: "mouse,up,1"; source: "base";
+         action: STATE_SET "hilight" 0.0;
+         target: "base";
+      }
+      program {
+         signal: "mouse,in"; source: "base";
+         action: STATE_SET "hilight" 0.0;
+         target: "base";
+      }
+      program {
+         signal: "mouse,out"; source: "base";
+         action: STATE_SET "default" 0.0;
+         target: "base";
+      }
+      program {
+         signal: "mouse,clicked,1*"; source: "base";
+         action: SIGNAL_EMIT "e,action,conf" "";
+      }
+   }
+}

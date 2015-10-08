@@ -1,0 +1,742 @@
+
+/*
+ * Contains list of all used images: images list first, icons second.
+ */
+
+//~elementary images
+
+image: "images/elm/thumb_shadow.png" COMP;
+image: "images/elm/icon_folder.png" COMP;
+	
+image: "images/elm/ephoto/directory-512.png" COMP;
+image: "images/elm/ephoto/directory-up-512.png" COMP;
+	
+/*image: "images/elm/dialog_im0.png" COMP;*/ /* background */
+
+image: "images/elm/menu_im2.png" COMP; /* hilite */
+
+image: "images/elm/comp-sh1.png" COMP; /* left arrow */
+
+/* busy animations */
+image: "images/elm/busy-1.png" COMP;
+image: "images/elm/busy-2.png" COMP;
+image: "images/elm/busy-3.png" COMP;
+image: "images/elm/busy-4.png" COMP;
+image: "images/elm/busy-5.png" COMP;
+image: "images/elm/busy-6.png" COMP;
+image: "images/elm/busy-7.png" COMP;
+image: "images/elm/busy-8.png" COMP;
+image: "images/elm/busy-9.png" COMP;
+
+//some elm images
+image: "images/elm/bt_base1.png" COMP;
+image: "images/elm/bt_base2.png" COMP;
+image: "images/elm/bt_hilight.png" COMP;
+image: "images/elm/bt_shine.png" COMP;
+image: "images/elm/bt_glow.png" COMP;
+image: "images/elm/bt_dis_base.png" COMP;
+image: "images/elm/bt_dis_hilight.png" COMP;
+image: "images/elm/sp_bt_l.png" COMP;
+image: "images/elm/sp_bt_r.png" COMP;
+image: "images/elm/bt_sm_base1.png" COMP;
+//image: "images/elm/bt_sm_shine.png" COMP;
+//image: "images/elm/bt_sm_hilight.png" COMP;
+image: "images/elm/ilist_1.png" COMP;
+image: "images/elm/ilist_2.png" COMP;
+image: "images/elm/ilist_item_shadow.png" COMP;
+image: "images/elm/check.png" COMP;
+image: "images/elm/icon_arrow_up.png" COMP;
+image: "images/elm/icon_arrow_down.png" COMP;
+image: "images/elm/icon_arrow_left.png" COMP;
+image: "images/elm/icon_arrow_right.png" COMP;
+image: "images/elm/shad_circ.png" COMP;
+image: "images/elm/ilist_1_h.png" COMP;
+image: "images/elm/ilist_2_h.png" COMP;
+image: "images/elm/bt_bases.png" COMP;
+image: "images/elm/bt_basew.png" COMP;
+image: "images/elm/bt_hilightw.png" COMP;
+
+image: "images/elm/tooltip-base.png" COMP;
+image: "images/elm/tooltip-corner-top-left-tip.png" COMP;
+image: "images/elm/tooltip-corner-top-right-tip.png" COMP;
+image: "images/elm/tooltip-corner-bottom-left-tip.png" COMP;
+image: "images/elm/tooltip-corner-bottom-right-tip.png" COMP;
+image: "images/elm/tooltip-edge-left-tip.png" COMP;
+image: "images/elm/tooltip-edge-right-tip.png" COMP;
+image: "images/elm/tooltip-edge-bottom-tip.png" COMP;
+image: "images/elm/tooltip-edge-top-tip.png" COMP;
+
+image: "images/elm/seg_single_pressed.png" COMP;
+image: "images/elm/seg_single_selected.png" COMP;
+image: "images/elm/seg_single_normal.png" COMP;
+
+image: "images/elm/seg_left_pressed.png" COMP;
+image: "images/elm/seg_left_selected.png" COMP;
+image: "images/elm/seg_left_normal.png" COMP;
+
+image: "images/elm/seg_middle_pressed.png" COMP;
+image: "images/elm/seg_middle_selected.png" COMP;
+image: "images/elm/seg_middle_normal.png" COMP;
+
+image: "images/elm/seg_right_pressed.png" COMP;
+image: "images/elm/seg_right_selected.png" COMP;
+image: "images/elm/seg_right_normal.png" COMP;
+
+//~end of elementary images
+
+image: "images/popup_round.png" COMP;
+
+image: "images/comp/comp-sh1.png" COMP;
+image: "images/comp/bt_glow.png" COMP;
+image: "images/screen_circular_shadow.png" COMP;
+image: "images/win_glow.png" COMP;
+
+image: "images/scrollframe/trough_v.png" COMP; 
+image: "images/scrollframe/over.png" COMP;
+
+image: "images/bevel_over.png" COMP; /* gradient */
+image: "images/bevel_under.png" COMP; /* gradient */
+image: "images/bevel_tab_shadow.png" COMP; /* gradient */
+image: "images/bevel_evry_fade.png" COMP; /* gradient */
+image: "images/menubar.png" COMP; /* gradient */
+
+image: "images/menu_grad.png" COMP; /* gradient */
+image: "images/backdrop_grad.png" COMP; /* gradient */
+
+//~ check widget
+image: "images/check_bt0.png" COMP; /* base */
+image: "images/check_bt1.png" COMP; /* unchecked */
+image: "images/check_bt2.png" COMP; /* checked */
+image: "images/check_bt3.png" COMP; /* focus */
+image: "images/check_bt4.png" COMP; /* shadow */
+
+//~ pointer
+image: "images/pointer_im1.png" COMP; /* default mode */
+image: "images/pointer_im2.png" COMP; /* pulsating mode */
+image: "images/pointer_im3.png" COMP; /* monochrome */
+image: "images/pointer_im4.png" COMP; /* black */
+image: "images/pointer_im5.png" COMP; /* entry */
+image: "images/mini_box_glow.png" COMP; /* mini box glow*/
+image: "images/add_glow_small.png" COMP; /* add glow small */
+image: "images/led_dot_white.png" COMP; /* led dot white */
+
+//~ radio widget
+image: "images/radio_bt0.png" COMP; /* base */
+image: "images/radio_bt1.png" COMP; /* toggle off */
+image: "images/radio_bt2.png" COMP; /* toggle on */
+image: "images/radio_bt3.png" COMP; /* focus */
+image: "images/radio_bt4.png" COMP; /* shadow */
+
+//~ button
+image: "images/button_im0.png" COMP; /* base */
+image: "images/button_im1.png" COMP; /* enabled */
+image: "images/button_im2.png" COMP; /* disabled */
+image: "images/button_im3.png" COMP; /* focus */
+image: "images/button_im4.png" COMP; /* top shadow */
+image: "images/button_im5.png" COMP; /* shadow overlay */
+image: "images/button_im6.png" COMP; /* shadow overlay */
+image: "images/button_im7.png" COMP; /* bottom hilight */
+image: "images/button_im8.png" COMP; /* elm focus hilight */
+//~ frame
+image: "images/frame_im0.png" COMP; /* frame border */
+
+//~ menu
+image: "images/menu_im0.png" COMP; /* background */
+image: "images/menu_im1.png" COMP; /* separator */
+image: "images/menu_im2.png" COMP; /* hilite */
+image: "images/menu_im3.png" COMP; /* inactive arrow */
+image: "images/menu_im4.png" COMP; /* active arrow */
+image: "images/menu_im5.png" COMP; /* left arrow */
+
+//~ dialog
+image: "images/dialog_im0.png" COMP; /* background */
+image: "images/dialog_im1.png" COMP; /* separator */
+image: "images/dialog_im2.png" COMP; /* about detour dialog bg */
+
+//~ entry
+image: "images/entry_im0.png" COMP; /* base */
+/* image: "images/entry_im1.png" COMP; /\* focus *\/ */
+
+//~ deskpreview
+image: "images/deskpreview_im0.png" COMP; /* background */
+
+//~ decoration
+image: "images/decoration_im0.png" COMP; /* regular dot */
+image: "images/decoration_im1.png" COMP; /* wide dot */
+
+//~ about enlightenment
+image: "images/e17_logo.png" COMP; /* e17 logo */
+
+//~ exebuf
+image: "images/exebuf_im0.png" COMP; /* hilite */
+
+//~ ibar
+image: "images/ibar_im0.png" COMP; /* label */
+image: "images/ibar_im1.png" COMP; /* drop arrow */
+image: "images/ibar_im2.png" COMP; /* alternate label */
+image: "images/ibar_im3.png" COMP; /* typebuffer */
+
+//~ itask
+image: "images/itask_im0.png" COMP; /* bottom orientation */
+image: "images/itask_im1.png" COMP; /* top orientation */
+image: "images/itask_im2.png" COMP; /* left orientation */
+image: "images/itask_im3.png" COMP; /* right orientation */
+image: "images/itask_im4.png" COMP; /* label overlay */
+image: "images/itask_im5.png" COMP; /* label overlay */
+
+image: "images/engage_im0.png" COMP; /* bottom orientation */
+
+//~ tasks
+image: "images/button_normal.png" COMP;
+image: "images/button_clicked.png" COMP;
+image: "images/vgrad_med_dark.png" COMP;
+image: "images/glow_small.png" COMP;
+
+//~ gadman
+image: "images/gadman_im0.png" COMP; /* background */
+image: "images/gadman_im1.png" COMP; /* border */
+image: "images/gadman_im2.png" COMP; /* indicator */
+image: "images/gadman_im3.png" COMP; /* top arrow */
+image: "images/gadman_im4.png" COMP; /* bottom arrow */
+image: "images/gadman_im5.png" COMP; /* left arrow */
+image: "images/gadman_im6.png" COMP; /* right arrow */
+
+//~ spectrum
+image: "images/spectrum_im0.png" COMP; 	/* spectrum inset */
+image: "images/spectrum_im1.png" COMP; 	/* spectrum cursor */
+image: "images/spectrum_im2.png" COMP; 	/* x value */
+image: "images/spectrum_im3.png" COMP; 	/* y value middle*/
+image: "images/spectrum_im4.png" COMP; 	/* spectrum shadow */
+image: "images/spectrum_im5.png" COMP; 	/* y value top */
+image: "images/spectrum_im6.png" COMP; 	/* y value bottom */
+image: "images/spectrum_im7.png" COMP; 	/* y value inverted top */
+image: "images/spectrum_im8.png" COMP; 	/* y value inverted middle */
+image: "images/spectrum_im9.png" COMP; 	/* y value inverted bottom */
+image: "images/spectrum_im10.png" COMP; /* x follower */
+image: "images/spectrum_im11.png" COMP; /* y follower */
+
+//~ background
+image: "images/wallpaper_pat0.png" COMP; /* background pattern */
+image: "images/wallpaper_pat1.png" COMP; /* overlay pattern 35x35 */
+image: "images/wallpaper_pat2.png" COMP; /* overlay pattern 24x24 */
+image: "images/wallpaper_pat3.png" COMP; /* overlay pattern 4x4 */
+image: "images/wallpaper_pat4.png" COMP; /* overlay pattern 10x10 */
+
+//~ shelf
+image: "images/shelf_def_im0.png" COMP; /* regular orientation */
+image: "images/shelf_def_im1.png" COMP; /* left orientation */
+image: "images/shelf_def_im2.png" COMP; /* right orientation */
+image: "images/shelf_def_im3.png" COMP; /* inset */
+image: "images/shelf_def_im4.png" COMP; /* label overlay decoration */
+image: "images/shelf_def_im5.png" COMP; /* alternate */
+
+//~ busy cursor
+image: "images/cursor_shadow.png" COMP;
+image: "images/cursor_up.png" COMP;
+image: "images/cursor_main.png" COMP;
+
+//~ init
+image: "images/init_im0.png" COMP; /* init splash screen */
+
+//~ cslider
+image: "images/cslider_im0.png" COMP; /* base */
+image: "images/cslider_im1.png" COMP; /* left */
+image: "images/cslider_im2.png" COMP; /* right */
+
+//~ border: default border style
+image: "images/window-border.png" COMP;
+image: "images/window-border-color.png" COMP; 
+image: "images/window-border-glass.png" COMP;
+image: "images/window-border-square.png" COMP;
+image: "images/window-border-squarec.png" COMP;
+
+//~ border buttons
+image: "images/window-border_bt0.png" COMP; /* base */
+image: "images/window-border_bt1.png" COMP; /* button flat */
+image: "images/window-border_bt2.png" COMP; /* minimize */
+image: "images/window-border_bt3.png" COMP; /* maximize */
+image: "images/window-border_bt4.png" COMP; /* close */
+image: "images/window-border_bt5.png" COMP; /* base for border menu */
+
+//~ window border menu (details)
+image: "images/button_detail_basic.png" COMP; 			/* empty */
+image: "images/button_detail_borderless.png" COMP; 		/* empty */
+image: "images/button_detail_close.png" COMP;
+image: "images/button_detail_fullscreen.png" COMP;
+image: "images/button_detail_kill.png" COMP;
+image: "images/button_detail_locks.png" COMP; 			/* empty */
+image: "images/button_detail_locks_user.png" COMP; 		/* empty */
+image: "images/button_detail_locks_application.png" COMP; 	/* empty */
+image: "images/button_detail_maximize.png" COMP;
+image: "images/button_detail_minimize.png" COMP;
+image: "images/button_detail_properties.png" COMP;
+image: "images/button_detail_remember.png" COMP; 		/* empty */
+image: "images/button_detail_sendto.png" COMP; 			/* empty */
+image: "images/button_detail_shade.png" COMP;
+image: "images/button_detail_skip.png" COMP; 			/* empty */
+image: "images/button_detail_skip_pager.png" COMP; 		/* empty */
+image: "images/button_detail_skip_taskbar.png" COMP; 		/* empty */
+image: "images/button_detail_skip_winlist.png" COMP; 		/* empty */
+image: "images/button_detail_stack_below.png" COMP; 		/* empty */
+image: "images/button_detail_stacking.png" COMP; 		/* empty */
+image: "images/button_detail_stack_normal.png" COMP; 		/* empty */
+image: "images/button_detail_stack_on_top.png" COMP; 		/* empty */
+image: "images/button_detail_stick.png" COMP;
+
+//~ pager
+image: "images/pager_im0.png" COMP; /* unfocused */
+image: "images/pager_im1.png" COMP; /* selected window: icon also used by winlist */
+image: "images/pager_im2.png" COMP; /* left lid */
+image: "images/pager_im3.png" COMP; /* right lid */
+image: "images/pager_im4.png" COMP; /* icon minimized: used by winlist */
+image: "images/pager_im5.png" COMP; /* icon shaded: used by winlist */
+image: "images/pager_im6.png" COMP; /* overlay_bg */
+image: "images/pager_im7.png" COMP; /* icon: unselected window */
+/* image: "images/pager_im8.png" COMP; /\* focused *\/ */
+
+//~ about_detour
+image: "images/logo_im0.png" COMP; /* wireframe design */
+image: "images/logo_im1.png" COMP; /* label design */
+
+//~ desklock
+image: "images/desklock_im0.png" COMP; /* dialog */
+
+//~ scrollframe
+image: "images/scrollframe_im0.png" COMP; /* bg */
+image: "images/scrollframe_im1.png" COMP; /* inset */
+/* image: "images/scrollframe_im2.png" COMP; /\* focus *\/ */
+
+//~ transitions
+image: "images/transition_im0.png" COMP; /* transitional wipe */
+
+//~ fileman
+image: "images/fileman_im0.png" COMP; /* drop image */
+image: "images/fileman_im1.png" COMP; /* icon shadow */
+image: "images/fileman_im2.png" COMP; /* thumb bg */
+image: "images/fileman_im3.png" COMP; /* rubberband */
+image: "images/fileman_im4.png" COMP; /* icon label */
+image: "images/fileman_im5.png" COMP; /* main window: top shadow */
+image: "images/fileman_im6.png" COMP; /* main window: bottom shadow */
+image: "images/fileman_im7.png" COMP; /* toolbar image top */
+image: "images/fileman_im8.png" COMP; /* toolbar image bottom */
+
+//~ fileman icons
+image: "images/custom/cd_gnome-mime-application-pdf.png" COMP; /* pdf icon image */
+image: "images/custom/cd_folder_tar.png" COMP; /* archive folder icon image */
+image: "images/custom/cd_document.png" COMP; /* document icon image */
+image: "images/custom/cd_folder.png" COMP; /* folder icon image */
+image: "images/custom/cd_image-x-generic.png" COMP; /* image icon image */
+image: "images/custom/cd_text-html.png" COMP; /* text document icon image */
+image: "images/custom/cd_text-x-generic.png" COMP; /* text icon image */
+image: "images/custom/cd_font-x-generic.png" COMP; /* font icon image */
+image: "images/custom/cd_application.png" COMP; /* executable image */
+
+//~ module: efm_navigation
+image: "images/efmnav_bt0.png" COMP; 	/* back button base */
+image: "images/efmnav_bt1.png" COMP;	/* back button */
+image: "images/efmnav_bt2.png" COMP;	/* forward button base*/
+image: "images/efmnav_bt3.png" COMP;	/* forward button */
+image: "images/efmnav_bt4.png" COMP;	/* up button base */
+image: "images/efmnav_bt5.png" COMP;	/* up button */
+image: "images/efmnav_bt6.png" COMP; 	/* back button symbol */
+image: "images/efmnav_bt7.png" COMP;	/* forward button symbol */
+image: "images/efmnav_bt8.png" COMP;	/* up button symbol */
+image: "images/efmnav_bt9.png" COMP;	/* refresh button symbol */
+image: "images/efmnav_bt10.png" COMP;	/* favorites button symbol */
+image: "images/efmnav_bt11.png" COMP;	/* pathbar button */
+image: "images/efmnav_bt12.png" COMP;	/* pathbar button */
+
+//~ slider
+image: "images/slider_im0.png" COMP; /* horizontal slider */
+image: "images/slider_im1.png" COMP; /* horizontal slider shadow */
+image: "images/slider_im2.png" COMP; /* vertical slider */
+image: "images/slider_im3.png" COMP; /* vertical slider shadow */
+
+//~ runner
+image: "images/runner_im0.png" COMP; 	/* horizontal left: runner image */
+image: "images/runner_im1.png" COMP; 	/* horizontal left: runner image disabled */
+image: "images/runner_im2.png" COMP; 	/* slider indicator horizontal */
+image: "images/runner_im3.png" COMP; 	/* slider indicator vertical */
+
+
+//~ scrollbar, scrollframe: runner & slider
+/* image: "images/scrollbar_im4.png" COMP; /\* horizontal scrollframe runner *\/
+ * image: "images/scrollbar_im5.png" COMP; /\* vertical scrolframe runner *\/ */
+
+//~ scrollbar, scrollframe: arrows
+image: "images/scrollbar_im6.png" COMP; /* left arrow */
+image: "images/scrollbar_im7.png" COMP; /* right arrow */
+image: "images/scrollbar_im8.png" COMP; /* top arrow */
+image: "images/scrollbar_im9.png" COMP; /* bottom arrow */
+
+//~ scrollframe
+image: "images/scrollframe-bar_im0.png" COMP; /* horizontal bar */
+image: "images/scrollframe-bar_im1.png" COMP; /* horizontal stipple */
+image: "images/scrollframe-bar_im2.png" COMP; /* vertical bar */
+image: "images/scrollframe-bar_im3.png" COMP; /* vertical stipple */
+
+//~ misc images 
+image: "images/screen_im0.png" COMP;
+
+/*
+ * Contains list of all used icons. 
+ */
+
+image: "images/icons/everything.png" COMP;
+
+//~ fill and stretch options (screen)
+image: "images/icons/wallscreen_im0.png" COMP; /* gradient box */
+image: "images/icons/wallscreen_im1.png" COMP; /* stretch */
+image: "images/icons/wallscreen_im2.png" COMP; /* center */
+image: "images/icons/wallscreen_im3.png" COMP; /* fill */
+image: "images/icons/wallscreen_im4.png" COMP; /* tile */
+image: "images/icons/wallscreen_im5.png" COMP; /* within */
+
+//~ battery
+/*image: "images/icons/battery-charge.png" COMP;
+image: "images/icons/battery-0.png" COMP;
+image: "images/icons/battery-20.png" COMP;
+image: "images/icons/battery-40.png" COMP;
+image: "images/icons/battery-60.png" COMP;
+image: "images/icons/battery-80.png" COMP;
+image: "images/icons/battery-100.png" COMP;*/
+
+//~ shelf
+image: "images/icons/icon_shelf_bottom_left.png" COMP;
+image: "images/icons/icon_shelf_bottom.png" COMP;
+image: "images/icons/icon_shelf_bottom_right.png" COMP;
+image: "images/icons/icon_shelf_left_bottom.png" COMP;
+image: "images/icons/icon_shelf_left.png" COMP;
+image: "images/icons/icon_shelf_left_top.png" COMP;
+image: "images/icons/icon_shelf_right_bottom.png" COMP;
+image: "images/icons/icon_shelf_right.png" COMP;
+image: "images/icons/icon_shelf_right_top.png" COMP;
+image: "images/icons/icon_shelf_top_left.png" COMP;
+image: "images/icons/icon_shelf_top.png" COMP;
+image: "images/icons/icon_shelf_top_right.png" COMP;
+image: "images/icons/icon_shelf_bottom_desk.png" COMP;
+image: "images/icons/icon_shelf_custom.png" COMP;
+image: "images/icons/icon_shelf_dock.png" COMP;
+image: "images/icons/icon_shelf_menu_bar.png" COMP;
+image: "images/icons/icon_shelf_panel.png" COMP;
+image: "images/icons/icon_shelf_top_desk.png" COMP;
+
+//~ efm
+image: "images/icons/icon_efm_dnd_copy.png" COMP;
+image: "images/icons/icon_efm_dnd_ask.png" COMP;
+image: "images/icons/icon_efm_dnd_move.png" COMP;
+image: "images/icons/icon_efm_vol_mounted.png" COMP;
+image: "images/icons/icon_efm_vol_unmounted.png" COMP;
+
+image: "images/icons/button-back.png" COMP;
+image: "images/icons/button-forward.png" COMP;
+image: "images/icons/button-down.png" COMP;
+image: "images/icons/button-up.png" COMP;
+
+//~main menu
+image: "images/icon_system.png" COMP;
+image: "images/icon_system-shutdown.png" COMP;
+image: "images/icon_system-shutdown-sys.png" COMP;
+image: "images/icon_system-restart.png" COMP;
+image: "images/icon_system-suspend.png" COMP;
+image: "images/icon_system-suspend-hibernate.png" COMP;
+image: "images/icon_system-log-out.png" COMP;
+image: "images/icon_system-lock-screen.png" COMP;
+image: "images/icon_system-log-out.png" COMP;
+image: "images/icon_enlightenment.png" COMP;
+image: "images/icon_warning.png" COMP;
+
+image: "images/actions/empty.png" COMP;
+image: "images/actions/object-move.png" COMP;
+image: "images/actions/object-resize.png" COMP;
+image: "images/actions/application-default-icon.png" COMP;
+
+image: "images/actions/edit-delete.png" COMP;
+image: "images/actions/exit.png" COMP;
+image: "images/actions/document-import.png" COMP;
+image: "images/actions/gnome-lockscreen.png" COMP;
+image: "images/actions/gtk-edit.png" COMP;
+image: "images/actions/call-start.png" COMP;
+image: "images/actions/dialog-close.png" COMP;
+image: "images/actions/help-contents.png" COMP;
+image: "images/actions/format-justify-right.png" COMP;
+image: "images/actions/gtk-spell-check.png" COMP;
+image: "images/actions/bookmark_add.png" COMP;
+image: "images/actions/list-remove.png" COMP;
+image: "images/actions/remove.png" COMP;
+image: "images/actions/go-up.png" COMP;
+image: "images/actions/format-text-bold.png" COMP;
+image: "images/actions/view-calendar-day.png" COMP;
+image: "images/actions/back.png" COMP;
+image: "images/actions/contact.png" COMP;
+image: "images/actions/edit-undo.png" COMP;
+image: "images/actions/Close.png" COMP;
+image: "images/actions/mail-mark-read.png" COMP;
+image: "images/actions/gtk-about.png" COMP;
+image: "images/actions/format-indent-more.png" COMP;
+image: "images/actions/editcut.png" COMP;
+image: "images/actions/gtk-refresh.png" COMP;
+image: "images/actions/edit-find.png" COMP;
+image: "images/actions/gtk-zoom-fit.png" COMP;
+image: "images/actions/object-flip-horizontal.png" COMP;
+image: "images/actions/gtk-zoom-out.png" COMP;
+image: "images/actions/view-calendar-list.png" COMP;
+image: "images/actions/gtk-file.png" COMP;
+image: "images/actions/edit-redo.png" COMP;
+image: "images/actions/format-justify-fill.png" COMP;
+image: "images/actions/insert-object.png" COMP;
+image: "images/actions/gtk-media-pause.png" COMP;
+image: "images/actions/gnome-stock-mic.png" COMP;
+image: "images/actions/system-shutdown-panel.png" COMP;
+image: "images/actions/gtk-color-picker.png" COMP;
+image: "images/actions/location-entry.png" COMP;
+image: "images/actions/format-text-direction-ltr.png" COMP;
+image: "images/actions/gtk-fullscreen.png" COMP;
+image: "images/actions/extract-archive.png" COMP;
+image: "images/actions/insert-text.png" COMP;
+image: "images/actions/stock_mail-move.png" COMP;
+image: "images/actions/gtk-media-forward-rtl.png" COMP;
+image: "images/actions/help-faq.png" COMP;
+image: "images/actions/document-send.png" COMP;
+image: "images/actions/gnome-searchtool.png" COMP;
+image: "images/actions/gtk-media-record.png" COMP;
+image: "images/actions/down.png" COMP;
+image: "images/actions/gtk-media-forward-ltr.png" COMP;
+image: "images/actions/view-calendar-week.png" COMP;
+image: "images/actions/address-book-new.png" COMP;
+image: "images/actions/document-save.png" COMP;
+image: "images/actions/gtk-media-next-rtl.png" COMP;
+image: "images/actions/hint.png" COMP;
+image: "images/actions/dialog-apply.png" COMP;
+image: "images/actions/editpaste.png" COMP;
+image: "images/actions/zoom-fit-width.png" COMP;
+image: "images/actions/centrejust.png" COMP;
+image: "images/actions/mail-mark-important.png" COMP;
+image: "images/actions/gtk-media-next-ltr.png" COMP;
+image: "images/actions/format-text-italic.png" COMP;
+image: "images/actions/go-top.png" COMP;
+image: "images/actions/download.png" COMP;
+image: "images/actions/editcopy.png" COMP;
+image: "images/actions/sleep.png" COMP;
+image: "images/actions/stock_mail-receive.png" COMP;
+image: "images/actions/tab_new.png" COMP;
+image: "images/actions/gtk-media-stop.png" COMP;
+image: "images/actions/go-first.png" COMP;
+image: "images/actions/messagebox_warning.png" COMP;
+image: "images/actions/stock_mail-flag-for-followup-done.png" COMP;
+image: "images/actions/gnome-stock-mail-snd.png" COMP;
+image: "images/actions/gnome-stock-mail-rpl.png" COMP;
+image: "images/actions/document-export.png" COMP;
+image: "images/actions/bookmark-missing.png" COMP;
+image: "images/actions/gtk-strikethrough.png" COMP;
+image: "images/actions/editclear.png" COMP;
+image: "images/actions/format-indent-less.png" COMP;
+image: "images/actions/call-stop.png" COMP;
+image: "images/actions/object-rotate-left.png" COMP;
+image: "images/actions/gtk-remove.png" COMP;
+image: "images/actions/mail_replyall.png" COMP;
+image: "images/actions/playlist.png" COMP;
+image: "images/actions/document-new.png" COMP;
+image: "images/actions/gtk-select-color.png" COMP;
+image: "images/actions/document-open.png" COMP;
+image: "images/actions/forward.png" COMP;
+image: "images/actions/add-files-to-archive.png" COMP;
+image: "images/actions/view-calendar-month.png" COMP;
+image: "images/actions/document-page-setup.png" COMP;
+image: "images/actions/document-print-preview.png" COMP;
+image: "images/actions/gtk-zoom-100.png" COMP;
+image: "images/actions/format-text-direction-rtl.png" COMP;
+image: "images/actions/media-optical-data-new.png" COMP;
+image: "images/actions/gnome-stock-mail-new.png" COMP;
+image: "images/actions/mail-mark-not-junk.png" COMP;
+image: "images/actions/go-jump.png" COMP;
+image: "images/actions/stock_new-tab.png" COMP;
+image: "images/actions/media-playlist-repeat.png" COMP;
+image: "images/actions/gtk-media-play-ltr.png" COMP;
+image: "images/actions/object-flip-vertical.png" COMP;
+image: "images/actions/package-supported.png" COMP;
+image: "images/actions/appointment.png" COMP;
+image: "images/actions/gtk-zoom-in.png" COMP;
+image: "images/actions/stock_new-window.png" COMP;
+image: "images/actions/info.png" COMP;
+image: "images/actions/gtk-sort-descending.png" COMP;
+image: "images/actions/stock_mail-flag-for-followup.png" COMP;
+image: "images/actions/folder_new.png" COMP;
+image: "images/actions/mail-mark-junk.png" COMP;
+image: "images/actions/document-revert.png" COMP;
+image: "images/actions/document-save-as.png" COMP;
+image: "images/actions/media-eject.png" COMP;
+image: "images/actions/format-justify-left.png" COMP;
+image: "images/actions/application-exit.png" COMP;
+image: "images/actions/bottom.png" COMP;
+image: "images/actions/media-playlist-shuffle.png" COMP;
+image: "images/actions/insert-link.png" COMP;
+image: "images/actions/object-rotate-right.png" COMP;
+image: "images/actions/gnome-run.png" COMP;
+image: "images/actions/stock_mail-replied.png" COMP;
+image: "images/actions/stock_mail-unread-multiple.png" COMP;
+image: "images/actions/go-today.png" COMP;
+image: "images/actions/stock_mail-merge.png" COMP;
+image: "images/actions/mail-send-receive.png" COMP;
+image: "images/actions/stock_sent-mail.png" COMP;
+image: "images/actions/button_cancel.png" COMP;
+image: "images/actions/gohome.png" COMP;
+image: "images/actions/zoom-fit-page.png" COMP;
+image: "images/actions/contact-new.png" COMP;
+image: "images/actions/insert-image.png" COMP;
+image: "images/actions/edit-select-all.png" COMP;
+image: "images/actions/edit-find-replace.png" COMP;
+image: "images/actions/view-calendar-workweek.png" COMP;
+image: "images/actions/stock_mail-copy.png" COMP;
+image: "images/actions/format-text-underline.png" COMP;
+image: "images/actions/gnome-stock-mail-fwd.png" COMP;
+image: "images/actions/document-print.png" COMP;
+image: "images/actions/add.png" COMP;
+image: "images/actions/format-text-strikethrough.png" COMP;
+image: "images/actions/finish.png" COMP;
+image: "images/actions/mail-mark-unread.png" COMP;
+image: "images/actions/gtk-leave-fullscreen.png" COMP;
+image: "images/actions/exit.png" COMP;
+image: "images/actions/document-import.png" COMP;
+image: "images/actions/gnome-lockscreen.png" COMP;
+image: "images/actions/gtk-edit.png" COMP;
+image: "images/actions/call-start.png" COMP;
+image: "images/actions/dialog-close.png" COMP;
+image: "images/actions/help-contents.png" COMP;
+image: "images/actions/format-justify-right.png" COMP;
+image: "images/actions/gtk-spell-check.png" COMP;
+image: "images/actions/bookmark_add.png" COMP;
+image: "images/actions/list-remove.png" COMP;
+image: "images/actions/remove.png" COMP;
+image: "images/actions/go-up.png" COMP;
+image: "images/actions/format-text-bold.png" COMP;
+image: "images/actions/view-calendar-day.png" COMP;
+image: "images/actions/back.png" COMP;
+image: "images/actions/contact.png" COMP;
+image: "images/actions/edit-undo.png" COMP;
+image: "images/actions/Close.png" COMP;
+image: "images/actions/mail-mark-read.png" COMP;
+image: "images/actions/gtk-about.png" COMP;
+image: "images/actions/format-indent-more.png" COMP;
+image: "images/actions/editcut.png" COMP;
+image: "images/actions/gtk-refresh.png" COMP;
+image: "images/actions/edit-find.png" COMP;
+image: "images/actions/gtk-zoom-fit.png" COMP;
+image: "images/actions/object-flip-horizontal.png" COMP;
+image: "images/actions/gtk-zoom-out.png" COMP;
+image: "images/actions/view-calendar-list.png" COMP;
+image: "images/actions/gtk-file.png" COMP;
+image: "images/actions/edit-redo.png" COMP;
+image: "images/actions/format-justify-fill.png" COMP;
+image: "images/actions/insert-object.png" COMP;
+image: "images/actions/gtk-media-pause.png" COMP;
+image: "images/actions/gnome-stock-mic.png" COMP;
+image: "images/actions/system-shutdown-panel.png" COMP;
+image: "images/actions/gtk-color-picker.png" COMP;
+image: "images/actions/location-entry.png" COMP;
+image: "images/actions/format-text-direction-ltr.png" COMP;
+image: "images/actions/gtk-fullscreen.png" COMP;
+image: "images/actions/extract-archive.png" COMP;
+image: "images/actions/insert-text.png" COMP;
+image: "images/actions/stock_mail-move.png" COMP;
+image: "images/actions/gtk-media-forward-rtl.png" COMP;
+image: "images/actions/help-faq.png" COMP;
+image: "images/actions/document-send.png" COMP;
+image: "images/actions/gnome-searchtool.png" COMP;
+image: "images/actions/gtk-media-record.png" COMP;
+image: "images/actions/down.png" COMP;
+image: "images/actions/gtk-media-forward-ltr.png" COMP;
+image: "images/actions/view-calendar-week.png" COMP;
+image: "images/actions/address-book-new.png" COMP;
+image: "images/actions/document-save.png" COMP;
+image: "images/actions/gtk-media-next-rtl.png" COMP;
+image: "images/actions/hint.png" COMP;
+image: "images/actions/dialog-apply.png" COMP;
+image: "images/actions/editpaste.png" COMP;
+image: "images/actions/zoom-fit-width.png" COMP;
+image: "images/actions/centrejust.png" COMP;
+image: "images/actions/mail-mark-important.png" COMP;
+image: "images/actions/gtk-media-next-ltr.png" COMP;
+image: "images/actions/format-text-italic.png" COMP;
+image: "images/actions/go-top.png" COMP;
+image: "images/actions/download.png" COMP;
+image: "images/actions/editcopy.png" COMP;
+image: "images/actions/sleep.png" COMP;
+image: "images/actions/stock_mail-receive.png" COMP;
+image: "images/actions/tab_new.png" COMP;
+image: "images/actions/gtk-media-stop.png" COMP;
+image: "images/actions/go-first.png" COMP;
+image: "images/actions/messagebox_warning.png" COMP;
+image: "images/actions/stock_mail-flag-for-followup-done.png" COMP;
+image: "images/actions/gnome-stock-mail-snd.png" COMP;
+image: "images/actions/gnome-stock-mail-rpl.png" COMP;
+image: "images/actions/document-export.png" COMP;
+image: "images/actions/bookmark-missing.png" COMP;
+image: "images/actions/gtk-strikethrough.png" COMP;
+image: "images/actions/editclear.png" COMP;
+image: "images/actions/format-indent-less.png" COMP;
+image: "images/actions/call-stop.png" COMP;
+image: "images/actions/object-rotate-left.png" COMP;
+image: "images/actions/gtk-remove.png" COMP;
+image: "images/actions/mail_replyall.png" COMP;
+image: "images/actions/playlist.png" COMP;
+image: "images/actions/document-new.png" COMP;
+image: "images/actions/gtk-select-color.png" COMP;
+image: "images/actions/document-open.png" COMP;
+image: "images/actions/forward.png" COMP;
+image: "images/actions/add-files-to-archive.png" COMP;
+image: "images/actions/view-calendar-month.png" COMP;
+image: "images/actions/document-page-setup.png" COMP;
+image: "images/actions/document-print-preview.png" COMP;
+image: "images/actions/gtk-zoom-100.png" COMP;
+image: "images/actions/format-text-direction-rtl.png" COMP;
+image: "images/actions/media-optical-data-new.png" COMP;
+image: "images/actions/gnome-stock-mail-new.png" COMP;
+image: "images/actions/mail-mark-not-junk.png" COMP;
+image: "images/actions/go-jump.png" COMP;
+image: "images/actions/stock_new-tab.png" COMP;
+image: "images/actions/media-playlist-repeat.png" COMP;
+image: "images/actions/gtk-media-play-ltr.png" COMP;
+image: "images/actions/object-flip-vertical.png" COMP;
+image: "images/actions/package-supported.png" COMP;
+image: "images/actions/appointment.png" COMP;
+image: "images/actions/gtk-zoom-in.png" COMP;
+image: "images/actions/stock_new-window.png" COMP;
+image: "images/actions/info.png" COMP;
+image: "images/actions/gtk-sort-descending.png" COMP;
+image: "images/actions/stock_mail-flag-for-followup.png" COMP;
+image: "images/actions/folder_new.png" COMP;
+image: "images/actions/mail-mark-junk.png" COMP;
+image: "images/actions/document-revert.png" COMP;
+image: "images/actions/document-save-as.png" COMP;
+image: "images/actions/media-eject.png" COMP;
+image: "images/actions/format-justify-left.png" COMP;
+image: "images/actions/application-exit.png" COMP;
+image: "images/actions/bottom.png" COMP;
+image: "images/actions/media-playlist-shuffle.png" COMP;
+image: "images/actions/insert-link.png" COMP;
+image: "images/actions/object-rotate-right.png" COMP;
+image: "images/actions/gnome-run.png" COMP;
+image: "images/actions/stock_mail-replied.png" COMP;
+image: "images/actions/stock_mail-unread-multiple.png" COMP;
+image: "images/actions/go-today.png" COMP;
+image: "images/actions/stock_mail-merge.png" COMP;
+image: "images/actions/mail-send-receive.png" COMP;
+image: "images/actions/stock_sent-mail.png" COMP;
+image: "images/actions/button_cancel.png" COMP;
+image: "images/actions/gohome.png" COMP;
+image: "images/actions/zoom-fit-page.png" COMP;
+image: "images/actions/contact-new.png" COMP;
+image: "images/actions/insert-image.png" COMP;
+image: "images/actions/edit-select-all.png" COMP;
+image: "images/actions/edit-find-replace.png" COMP;
+image: "images/actions/view-calendar-workweek.png" COMP;
+image: "images/actions/stock_mail-copy.png" COMP;
+image: "images/actions/format-text-underline.png" COMP;
+image: "images/actions/gnome-stock-mail-fwd.png" COMP;
+image: "images/actions/document-print.png" COMP;
+image: "images/actions/add.png" COMP;
+image: "images/actions/format-text-strikethrough.png" COMP;
+image: "images/actions/finish.png" COMP;
+image: "images/actions/mail-mark-unread.png" COMP;
+image: "images/actions/gtk-leave-fullscreen.png" COMP;

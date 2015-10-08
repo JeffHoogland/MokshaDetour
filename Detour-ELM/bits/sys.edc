@@ -1,0 +1,71 @@
+
+group {
+	name: "e/sys/logout";
+	alias: "e/sys/halt";
+	alias: "e/sys/reboot";
+	alias: "e/sys/suspend";
+	alias: "e/sys/hibernate";
+	min: 273 196;
+	max: 273 196;
+
+	data {
+		item: "borderless" "1";
+	}
+
+	parts {
+		WIN_BG()
+		MESSAGE()
+		LOGO()
+		part { name: "busy_shadow"; mouse_events: 0;
+        description { state: "default" 0.0;
+            image.normal: "images/cursor_shadow.png";
+            rel1.relative: 0.0 0.0;
+            rel1.offset: 7 7;
+            rel2.relative: 0.0 1.0;
+            rel2.offset: 7 -8;
+            align: 0.0 1.0;
+			min: 40 40;
+            max: 40 40;
+            fixed: 1 1;
+			}
+		}
+		part { name: "busy_spinner"; mouse_events: 0;
+        description { state: "default" 0.0;
+            rel1.to: "busy_shadow";
+            rel2.to: "busy_shadow";
+            image.normal: "images/cursor_main.png";
+            map.on: 1;
+            map.smooth: 1;
+            map.rotation.center: "busy_shadow";
+            fixed: 1 1;
+			}
+        description { state: "spin" 0.0;
+			inherit: "default" 0.0;
+            map.rotation.z: 360;
+			}
+		}
+		part { name: "busy_up"; mouse_events: 0;
+		description { state: "default" 0.0;
+			fixed: 1 1;
+			image.normal: "images/cursor_up.png";
+			rel1.to: "busy_shadow";
+			rel2.to: "busy_shadow";
+			}
+		}
+	}
+	programs {
+		program { name: "spin";
+			signal: "show"; source: "";
+			action: STATE_SET "spin" 0.0;
+			transition: LINEAR 1.0;
+			target: "busy_spinner";
+			after: "spin2";
+			}
+		program { name: "spin2";
+			action: STATE_SET "default" 0.0;
+			target: "busy_spinner";
+			after: "spin";
+			}
+   }
+}
+

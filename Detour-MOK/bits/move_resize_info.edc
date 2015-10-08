@@ -1,0 +1,41 @@
+
+group {
+	name: "e/widgets/border/default/move";
+	alias: "e/widgets/border/default/resize";
+
+	data {
+		item: "shaped" "1";
+	}
+
+	parts {
+		part {
+			name: "background";
+			type: IMAGE;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				min: 60 32;
+				max: 9999 32;
+				color: 255 255 255 129;
+				image {
+					normal: "images/ibar_im0.png";
+					border: 5 5 5 5;
+				}
+			}
+		}
+
+		part {
+			name: "e.text.label";
+			type: TEXT;
+			effect: SHADOW;
+			scale: 1;
+			mouse_events: 0;
+			description {
+				state: "default" 0.0;
+				align: 0.5 0.5;
+				TEXT_COLOR_SELECTED;
+				TEXT_NORMAL("label_normal", 0.5 0.5, 1 0);
+			}
+		}
+	}
+}

@@ -1,0 +1,257 @@
+
+
+
+#if (COLORS == 0)
+color_class {
+	name: "focus";
+	/* blue intense */
+	//color:   22 107 246 255;
+	/* blue light */
+	//color:   135 169 224 255;
+	/* green */
+	//color:   135 169 38 255;
+	//color:   144 221 22 255;
+	/* red */
+	//color: 169 47 38 255;
+
+	color: 113 151 213 255;
+	
+	color3: 255 255 255 128;					
+}
+color_class {
+	name: "label_text";
+	color: 20 20 20 255;
+	color3: 255 255 255 128;					
+}
+color_class {
+	name: "menu_item";
+	color: 20 20 20 255;						
+	color3: 255 255 255 128;					
+}
+color_class {
+	name: "button_text";
+	color: 60 60 60 255;
+	color3: 255 255 255 128;					
+}
+color_class {
+	name: "border_title";
+	color: 80 80 80 128;
+	color3: 255 255 255 128;
+}
+color_class {
+	name: "border_title_active";
+	color: 80 80 80 255;						
+	color3: 255 255 255 128;					
+}
+color_class {
+	name: "ilist_item";
+	color: 0 0 0 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "ilist_item_odd";
+	color: 0 0 0 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "border_frame";
+	color: 226 226 226 255;
+}
+color_class {
+	name: "border_frame_active";
+	color: 211 211 211 255;
+}
+color_class {
+	name: "border_frame_post";
+	color: 160 160 160 30;
+}
+color_class {
+	name: "border_frame_active_post";
+	color: 211 211 211 0;
+}
+color_class {
+	name: "border_buttons_post";
+	color: 255 255 255 190;
+}
+color_class {
+	name: "border_buttons_post_active";
+	color: 255 255 255 255;
+}
+color_class {
+	name: "scroller_drag";
+	color: 255 255 255 255;
+}
+color_class {
+	name: "disk_selector";
+	color: 79 79 79 255;
+}
+color_class {
+	name: "menu_base";
+	color: 245 245 245 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "battery_low";
+	color: 208 9 9 255;
+	color2: 208 9 9 255;
+	color3: 208 9 9 255;
+}
+color_class {
+	name: "progress_bar1";
+	color: 255 255 255 150;
+}
+color_class {
+	name: "shelf_base_disabled";
+	color: 240 240 240 255;
+	color3: 0 0 0 0;
+}
+#else
+color_class {
+	name: "focus";
+	/* color:   22 107 246 255; */
+	color:   135 169 224 255;
+	/* color:   58 246 22 255; */
+	/* color:   135 169 38 255; */
+	color3: 255 255 255 128;					
+}
+color_class {
+	name: "comp_focus-out_color";
+	color: 253 253 253 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "border_frame";
+	color: 119 119 119 255;
+	color3: 255 255 255 255;
+}
+color_class {
+	name: "border_frame_active";
+	color: 50 50 50 255;
+	color3: 255 255 255 255;
+}
+color_class {
+	name: "border_frame_post";
+	color: 0 0 0 0;
+}
+color_class {
+	name: "border_frame_active_post";
+	color: 0 0 0 0;
+}
+color_class {
+	name: "border_title";
+	color: 187 187 187 255;
+	color3: 255 255 255 0;
+}
+color_class {
+	name: "border_title_active";
+	color: 224 224 224 255;
+	color3: 255 255 255 0;
+}
+color_class {
+	name: "ilist_item_header_base";
+	color: 171 171 171 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "ilist_item_base";
+	color: 218 218 218 243;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "ilist_item_odd_base";
+	color: 213 213 213 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "ilist_item";
+	color: 0 0 0 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "ilist_item_odd";
+	color: 0 0 0 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "frame_base";
+	color: 156 156 156 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "scrollframe_base";
+	color: 234 234 234 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "menu_item_active";
+	color: 255 255 255 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "dialog_base";
+	color: 140 140 140 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "shelf_base";
+	color: 180 180 180 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "shelf_base_disabled";
+	color: 165 165 165 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "button_text";
+	color: 20 20 20 255;
+	color3: 228 228 228 97;
+}
+color_class {
+	name: "menu_item";
+	color: 0 0 0 255;
+	color3: 255 255 255 43;
+}
+color_class {
+	name: "label_text";
+	color: 10 10 10 255;
+	color3: 255 255 255 87;
+}
+color_class {
+	name: "fileman_base";
+	color: 244 244 244 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "menu_base";
+	color: 210 210 210 228;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "battery_low";
+	color: 208 9 9 255;
+	color2: 208 9 9 255;
+	color3: 208 9 9 255;
+}
+color_class {
+	name: "scroller_drag";
+	color: 0 0 0 255;
+}
+color_class {
+	name: "disk_selector";
+	color: 0 0 0 255;
+}
+color_class {
+	name: "fileman_arrow";
+	color: 120 120 120 255;
+}
+color_class {
+	name: "progress_bar";
+	color: 120 120 120 255;
+}
+color_class {
+	name: "progress_bar1";
+	color: 120 120 120 150;
+}
+
+#endif

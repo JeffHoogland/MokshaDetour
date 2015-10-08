@@ -1,0 +1,211 @@
+#define TEXT_EFFECT SHADOW
+#define TEXT_EFFECT_BOLD SHADOW
+/* FIXME add EFFECT_ON_WHITE, inset effect wil not be seen and eats cpu */
+
+
+#if USE_BOLD_FONT 
+#define FONT "Sans:style=bold"
+#define FONT_BOLD "Sans:style=bold"
+#define FONT_ITALIC "Sans:style=bold,italic"
+#define TEXT_SIZE 8
+#define TEXT_SIZE_BOLD 8
+#define TEXT_SIZE_LARGE 8
+#define TEXT_SIZE_SMALL 7
+#define TEXT_COLOR								\
+    color_class: "label_text";					\
+    color3: 255 255 255 255;
+#else
+#define FONT "Sans"
+#define FONT_BOLD "Sans:style=bold"
+#define FONT_ITALIC "Sans:style=italic"
+#define TEXT_SIZE 9
+#define TEXT_SIZE_BOLD 8
+#define TEXT_SIZE_LARGE 9
+#define TEXT_SIZE_SMALL 8
+#define TEXT_COLOR								\
+    color_class: "label_text";					\
+    color3: 255 255 255 255;
+#endif
+
+
+#define TEXT_COLOR_BOLD							\
+    color3:  255 255 255 220;					\
+    color_class: "button_text";
+
+#define TEXT_COLOR_SELECTED			   			\
+	color: 255 255 255 255;			   		    \
+    color3: 17 16 16 100;
+
+//color3:  40 60 100 60;
+
+#define TEXT_COLOR_DISABLED						\
+	color: 64 64 64 255;						\
+    color3: 170 168 169 0;						\
+    color_class: "label_text_disabled";
+
+// color: 60 60 60 128;
+// color3: 255 255 255 128;
+
+#define TEXT_COLOR_CLICKED						\
+	color: 60 60 60 229;						\
+    color3: 170 168 169 64;
+
+#define TEXT_NORMAL(_text_class, _align, _min)	\
+	text {										\
+		text: "";								\
+		font: FONT;								\
+		size: TEXT_SIZE;						\
+		min: _min;								\
+		align: _align;							\
+		text_class: _text_class;				\
+	}
+
+#define TEXT_LARGE(_text_class, _align, _min)	\
+	text {										\
+		text: "";								\
+		font: FONT_BOLD;						\
+		size: TEXT_SIZE_LARGE;					\
+		min: _min;								\
+		align: _align;							\
+		text_class: _text_class;				\
+	}
+
+#define TEXT_SMALL(_text_class, _align, _min)	\
+	text {										\
+		text: "";								\
+		font: FONT;								\
+		size: TEXT_SIZE_SMALL;					\
+		min: _min;								\
+		align: _align;							\
+		text_class: _text_class;				\
+	}
+
+#define TEXT_HEADER(_text_class, _align, _min)	\
+	text {										\
+		text: "";								\
+		font: FONT_BOLD;						\
+		size: TEXT_SIZE_BOLD;					\
+		min: _min;								\
+		align: _align;							\
+		text_class: _text_class;				\
+	}
+
+#define TEXT_BOLD(_text_class, _align, _min)	\
+	text {										\
+		font: FONT_BOLD;						\
+		size: TEXT_SIZE_BOLD;					\
+		min: _min;								\
+		align: _align;							\
+		text_class: _text_class;				\
+	}
+
+#define TEXT_TITLE(_text_class, _align, _min)	\
+	text {										\
+		font: FONT_BOLD;						\
+		size: TEXT_SIZE_BOLD;					\
+		min: _min;								\
+		align: _align;							\
+		text_class: _text_class;				\
+	}
+
+
+styles {
+	style {
+		name: "textblock";
+		base: "font="FONT" font_size="TEXT_SIZE" align=left color=#070707";
+		tag:  "hilight" "+ font="FONT_BOLD" color=#3c3c3c";
+		tag:  "b" "+ font="FONT_BOLD"";
+		tag:  "br" "\n";
+		tag:  "/title" "- \n \n";
+	}
+    style {
+		name: "dialog";
+		base: "font="FONT" font_size="TEXT_SIZE" align=center color=#070707 wrap=word text_class=tb_plain";
+		tag:  "hilight" "+ font="FONT_BOLD" font_size="TEXT_SIZE_BOLD" color=#252525 style=shadow shadow_color=#ffffff90 text_class=tb_light";
+		tag:  "br" "\n";
+	}
+    style {
+		name: "dialog_left";
+		base: "font="FONT" font_size="TEXT_SIZE" align=left color=#070707 wrap=word text_class=tb_plain";
+		tag:  "hilight" "+ font="FONT_BOLD" font_size="TEXT_SIZE_BOLD" color=#252525 style=shadow shadow_color=#ffffff90 text_class=tb_light";
+		tag:  "br" "\n";
+	}
+    style {
+		name: "dialog_right";
+		base: "font="FONT" font_size="TEXT_SIZE" align=right color=#070707 wrap=word text_class=tb_plain";
+		tag:  "hilight" "+ font="FONT_BOLD" font_size="TEXT_SIZE_BOLD" color=#252525 style=shadow shadow_color=#ffffff90 text_class=tb_light";
+		tag:  "br" "\n";
+	}
+	style {
+		name: "sys_style";
+		base: "font="FONT_BOLD" font_size="TEXT_SIZE_BOLD" align=center color=#3c3c3c wrap=word text_class=tb_large";
+		tag:  "hilight" "+ font="FONT_BOLD" font_size="TEXT_SIZE_BOLD" color=#252525 style=shadow shadow_color=#ffffff90 text_class=tb_light";
+		tag: "br" "\n";
+	}
+#if 0
+	style {
+		name: "icon_textblock";
+		base: "font="FONT":style=Bold font_size="TEXT_SIZE_BOLD" align=center color=#070707 elipsis=1.0";
+		tag:  "br" "\n";
+	}
+#endif
+	style {
+		name: "fileman_icon_name";
+		base: "font="FONT" font_size="TEXT_SIZE" text_class=fileman_icon align=center color=#fff wrap=mixed ellipsis=1.0";
+	}
+	style {
+		name: "fileman_icon_name_full";
+		base: "font="FONT" font_size="TEXT_SIZE" text_class=fileman_icon align=center color=#fff wrap=mixed";
+	}
+	style {
+		name: "fileman_desktop_icon_name";
+		base: "font="FONT_BOLD" font_size="TEXT_SIZE_LARGE" text_class=desktop_icon align=center color=#fff wrap=mixed ellipsis=1.0 style=soft_shadow shadow_color=#0002";
+	}
+	style {
+		name: "fileman_desktop_icon_name_full";
+		base: "font="FONT_BOLD" font_size="TEXT_SIZE_LARGE" text_class=desktop_icon align=center color=#fff wrap=mixed style=soft_shadow shadow_color=#0002";
+	}
+	style {
+		name: "everything_textblock_style";
+		base: "font="FONT" font_size="TEXT_SIZE" align=left color=#070707";
+		tag:  "hilight" "+ font="FONT_BOLD" font_size="TEXT_SIZE_LARGE" color=#3C3C3C";
+		tag:  "b" "+ font="FONT_BOLD" font_size="TEXT_SIZE_BOLD;
+		tag:  "br" "\n";
+		tag:  "/title" "- \n \n";
+	}
+	style {
+		name: "notification_style";
+		base: "font="FONT" font_size="TEXT_SIZE" align=left color=#ccccccff wrap=mixed ellipsis=1.0";
+		tag:  "subject"  "+ font_size="TEXT_SIZE_SMALL"";
+		tag:  "body"  "+ font_size="TEXT_SIZE_SMALL"";
+		tag:  "br" "\n";
+		tag:  "b" "+ font="FONT_BOLD"";
+		tag:  "i" "+ font="FONT_ITALIC"";
+		tag:  "u" "+ underline=on";
+		tag:  "img" ""; /* images not supported */
+		tag:  "a" ""; /* links not supported */
+	}
+	style {
+		name: "message_text";
+		base: "font="FONT" font_size="TEXT_SIZE_LARGE" color=#fff wrap=mixed";
+	}
+	style {
+		name: "about_enlightenment";
+		base: "font="FONT" font_size="TEXT_SIZE" color=#2C2C2C wrap=word text_class=tb_plain";
+		tag:  "hilight" "+ font="FONT_BOLD" font_size="TEXT_SIZE_BOLD" color=#252525 style=shadow shadow_color=#ffffff90 text_class=tb_light";
+		tag: "title" "+ font="FONT_BOLD" font_size="TEXT_SIZE_LARGE" text_class=tb_big";
+		tag:  "br" "\n"; 
+		tag:  "/title" "- \n \n";
+	}
+	style {
+		name: "about_detour";
+		base: "font="FONT" font_size="TEXT_SIZE_LARGE" color=#2C2C2Cff wrap=word";
+		tag: "-" "+ font_size="TEXT_SIZE_LARGE"";
+		tag: "bold" "+ font="FONT_BOLD"";
+		tag: "center" "+ align=middle";
+		tag: "subliminal" "+ color=#07070710";
+		tag: "underline" "+ underline=on underline_color=#3c3c3c font_size="FONT_SIZE_LARGE" color=#3c3c3c";
+		tag: "lighter" "+ color=#07070780";
+		tag:  "br" "\n"; 
+	}  
+}

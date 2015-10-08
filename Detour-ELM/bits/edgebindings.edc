@@ -1,0 +1,211 @@
+group { name: "e/modules/conf_edgebindings/selection";
+   images.image: "images/edge_lr.png" COMP;
+   images.image: "images/edge_tb.png" COMP;
+   images.image: "images/edge_arrow_0.png" COMP;
+   images.image: "images/edge_arrow_1.png" COMP;
+   images.image: "images/edge_arrow_2.png" COMP;
+   images.image: "images/edge_arrow_3.png" COMP;
+   parts {
+      part { name: "bg"; type: RECT;
+         description { state: "default" 0.0;
+            rel1.to: "e.swallow.background";
+            rel2.to: "e.swallow.background";
+            color: 255 255 255 255;
+            color_class: "dialog_base";
+         }
+      }
+      part { name: "e.swallow.background";
+         type: SWALLOW;
+         description { state: "default" 0.0;
+            min: 160 120;
+            fixed: 1 1;
+            rel1.offset: 4 4;
+            rel2.relative: 0.4 1.0;
+            rel2.offset: -2 -5;
+         }
+      }
+      part { name: "bevel"; mouse_events: 0;
+         description { state: "default" 0.0;
+            rel1.offset: -10 -6;
+            rel1.to: "e.text.selection";
+            rel2.offset: 9 5;
+            rel2.to: "e.text.selection";
+            image.normal: "images/ibar_im0.png";
+			image.border: 5 5 5 5;
+			color: 0 0 0 128;
+            fill.smooth: 0;
+            fixed: 1 1;
+         }
+      }
+      part { name: "e.text.selection"; type: TEXT; mouse_events: 0;
+         effect: SHADOW BOTTOM;
+         description { state: "default" 0.0;
+            rel1.relative: 0.5 0.5;
+            rel1.to: "e.swallow.background";
+            rel2.relative: 0.5 0.5;
+            rel2.to: "e.swallow.background";
+            fixed: 1 1;
+            color: 255 255 255 255;
+            text { font: FN; size: 10;
+               min: 1 1;
+               ellipsis: -1;
+               text_class: "textblock_style2";
+            }
+         }
+      }
+      part { name: "shadow"; mouse_events: 0;
+         description { state: "default" 0.0;
+			image.normal: "images/spectrum_im0.png";
+			image.border: 7 7 7 7;
+            image.middle: 0;
+            rel1.to: "bg";
+            rel2.to: "bg";
+            fill.smooth: 0;
+            color: 255 255 255 128;
+         }
+      }
+      part { name: "e.edge.left";
+         description { state: "default" 0.0;
+            rel1.to: "e.swallow.background";
+            rel1.offset: 0 16;
+            rel2.to: "e.swallow.background";
+            rel2.offset: -1 -17;
+            image.normal: "images/edge_lr.png";
+            image.border: 3 0 0 0;
+            color: 255 255 255 200;
+            max: 16 99999;
+            align: 0.0 0.5;
+         }
+      }
+      part { name: "e.edge.right";
+         description { state: "default" 0.0;
+            rel1.to: "e.swallow.background";
+            rel1.offset: 0 16;
+            rel2.to: "e.swallow.background";
+            rel2.offset: -1 -17;
+            image.normal: "images/edge_lr.png";
+            image.border: 0 3 0 0;
+            color: 255 255 255 200;
+            max: 16 99999;
+            align: 1.0 0.5;
+         }
+      }
+      part { name: "e.edge.top";
+         description { state: "default" 0.0;
+            rel1.to: "e.swallow.background";
+            rel1.offset: 16 0;
+            rel2.to: "e.swallow.background";
+            rel2.offset: -17 -1;
+            image.normal: "images/edge_tb.png";
+            image.border: 0 0 3 0;
+            color: 255 255 255 200;
+            max: 99999 16;
+            align: 0.5 0.0;
+         }
+      }
+      part { name: "e.edge.bottom";
+         description { state: "default" 0.0;
+            rel1.to: "e.swallow.background";
+            rel1.offset: 16 0;
+            rel2.to: "e.swallow.background";
+            rel2.offset: -17 -1;
+            image.normal: "images/edge_tb.png";
+            image.border: 0 0 0 3;
+            color: 255 255 255 200;
+            max: 99999 16;
+            align: 0.5 1.0;
+         }
+      }
+      
+      part { name: "e.edge.top_left";
+         description { state: "default" 0.0;
+            rel1.to: "e.swallow.background";
+            rel2.to: "e.swallow.background";
+            max: 16 16;
+            color: 255 255 255 200;
+            image.normal: "images/edge_arrow_2.png";
+            align: 0.0 0.0;
+         }
+      }
+      part { name: "e.edge.top_right";
+         description { state: "default" 0.0;
+            rel1.to: "e.swallow.background";
+            rel2.to: "e.swallow.background";
+            max: 16 16;
+            color: 255 255 255 200;
+            image.normal: "images/edge_arrow_3.png";
+            align: 1.0 0.0;
+         }
+      }
+      part { name: "e.edge.bottom_right";
+         description { state: "default" 0.0;
+            rel1.to: "e.swallow.background";
+            rel2.to: "e.swallow.background";
+            max: 16 16;
+            color: 255 255 255 200;
+            image.normal: "images/edge_arrow_0.png";
+            align: 1.0 1.0;
+         }
+      }
+      part { name: "e.edge.bottom_left";
+         description { state: "default" 0.0;
+            rel1.to: "e.swallow.background";
+            rel2.to: "e.swallow.background";
+            max: 16 16;
+            color: 255 255 255 200;
+            image.normal: "images/edge_arrow_1.png";
+            align: 0.0 1.0;
+         }
+      }
+      part { name: "e.box"; type: BOX;
+         description { state: "default" 0.0;
+            rel1 {
+               relative: 1 1;
+               offset: 50 4;
+               to_x: "e.edge.bottom_right";
+               to_y: "e.text.description";
+            }
+            rel2 {
+               offset: -50 24;
+               to_y: "e.text.description";
+            }
+            box { layout: "horizontal";
+               padding: 0 0;
+               align: 0.5 0.5;
+               min: 0 1;
+            }
+         }
+      }
+      part { name: "e.swallow.slider"; type: SWALLOW;
+         description { state: "default" 0.0;
+            rel1 {
+               relative: 1 1;
+               offset: 5 1;
+               to_x: "e.edge.bottom_right";
+               to_y: "e.box";
+            }
+            rel2 {
+               offset: -5 -1;
+            }
+         }
+      }
+      part { name: "e.text.description"; type: TEXTBLOCK; mouse_events: 0;
+         scale: 1;
+         description { state: "default" 0.0;
+            rel1 {
+               relative: 1 0;
+               offset: 80 4;
+               to_x: "e.edge.right";
+            }
+            rel2 {
+               offset: -80 -45;
+            }
+            text {
+               style: "textblock";
+               min: 1 1;
+               ellipsis: -1;
+            }
+         }
+      }
+   }
+}

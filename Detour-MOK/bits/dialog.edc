@@ -1,0 +1,143 @@
+
+group {
+    name: "e/widgets/dialog/main";
+
+    parts {
+        part {
+            name: "dialog_bg";
+            type: IMAGE;
+            mouse_events: 0;
+
+            description {
+                state: "default" 0.0;
+                image.normal: "images/dialog_im0.png";
+                image.border: 0 0 3 1;
+				color_class: "dialog_base";
+            }
+        }
+
+        part {
+            name: "dialog_bg2";
+            type: RECT;
+            mouse_events: 0;
+
+			description {
+				state: "default" 0.0;
+				color: 0 0 0 20;
+			}
+		}
+
+		part {
+            name: "e.swallow.icon";
+            type: SWALLOW;
+            description {
+                state: "default" 0.0;
+                align: 0.0 0.5;
+                fixed: 1 0;
+                rel1 { 
+                    relative: 0.0 0.0; 
+                    offset: 4 4; 
+                }
+                rel2 { 
+                    to_y: "e.swallow.buttons"; 
+                    relative: 0.0 0.0; 
+                    offset: 4 -5; 
+                }
+            }
+        }
+
+		part {
+            name: "e.swallow.content";
+            type: SWALLOW;
+            description {
+                state: "default" 0.0;
+                rel1 { 
+                    to_x: "e.swallow.icon"; 
+                    relative: 1.0 0.0; 
+                    offset: 1 4; 
+                }
+                rel2 { 
+                    to_y: "e.swallow.buttons"; 
+                    relative: 1.0 0.0; 
+                    offset: -5 -9; 
+                }
+            }
+        }
+
+		part {
+            name: "e.swallow.buttons";
+            type: SWALLOW;
+            description {
+                state: "default" 0.0;
+                align: 0.5 1.0;
+                /* FIXME: Document this option */
+                fixed: 0 1;
+                rel1 {
+                    relative: 0.0 1.0; 
+                    offset: 4 -5; 
+                }
+                rel2 {  
+                    relative: 1.0 1.0; 
+                    offset: -5 -5; 
+                }
+            }
+        }
+    }
+}
+group {
+    name: "e/widgets/dialog/text";
+    parts {
+        part {
+            name: "e.textblock.message";
+            type: TEXTBLOCK;
+            scale: 1;
+            mouse_events: 0;
+            description {
+                state: "default" 0.0;
+                rel1 { 
+                    offset: 8 15; 
+                }
+                rel2 { 
+                    offset: -9 0; 
+                }
+                text {
+                    style: "dialog";
+                    min: 1 1;
+                }
+            }
+            description {
+               state:    "left" 0.0;
+               inherit: "default" 0.0;
+               text.style: "dialog_left";
+            }
+            description {
+               state:    "right" 0.0;
+               inherit: "default" 0.0;
+               text.style: "dialog_right";
+            }
+        }
+    }
+    programs {
+       program {
+          name: "left";
+          signal: "e,state,left";
+          source: "e";
+          action: STATE_SET "left" 0.0;
+          target: "e.textblock.message";
+       }
+       program {
+          name: "right";
+          signal: "e,state,right";
+          source: "e";
+          action: STATE_SET "right" 0.0;
+          target: "e.textblock.message";
+       }
+       program {
+          name: "center";
+          signal: "e,state,center";
+          source: "e";
+          action: STATE_SET "default" 0.0;
+          target: "e.textblock.message";
+       }
+    }
+}

@@ -1,0 +1,123 @@
+
+
+# ifdef ICON
+#  undef ICON
+# endif
+#define ICON(NAME, IMAGE_NAME)					\
+group { name: "e/icons/"NAME ;					\
+	parts {							\
+		part { 						\
+			name: "icon";				\
+			repeat_events: 1;			\
+			description { 				\
+				state: "default" 0.0;		\
+				max: 24 24;			\
+				aspect: 1.0 1.0;		\
+				aspect_preference: BOTH;	\
+				image { 			\
+					normal: IMAGE_NAME ; 	\
+				} 				\
+			}					\
+		}						\
+	}							\
+}
+
+#define ICONMIME(NAME, IMAGE_NAME) ICON("mimetypes/"NAME, IMAGE_NAME)
+
+/* Shelf icons: orientation */
+
+ICON("system", "images/icon_system.png")
+ICON("system-shutdown", "images/icon_system-shutdown.png")
+ICON("system-restart", "images/icon_system-restart.png")
+ICON("system-suspend", "images/icon_system-suspend.png")
+ICON("system-suspend-hibernate", "images/icon_system-suspend-hibernate.png")
+ICON("system-log-out", "images/icon_system-log-out.png")
+ICON("system-lock-screen", "images/icon_system-lock-screen.png")
+ICON("application-exit", "images/icon_system-log-out.png")
+ICON("enlightenment", "images/icon_enlightenment.png")
+ICON("help-about", "images/icon_enlightenment.png")
+ICON("preferences-desktop-shelf-bottom-desk", "images/icons/icon_shelf_bottom_desk.png")
+ICON("preferences-desktop-shelf-custom", "images/icons/icon_shelf_custom.png")
+ICON("preferences-desktop-shelf-dock", "images/icons/icon_shelf_dock.png")
+ICON("preferences-desktop-shelf-menu-bar", "images/icons/icon_shelf_menu_bar.png")
+ICON("preferences-desktop-shelf-panel", "images/icons/icon_shelf_panel.png")
+ICON("preferences-desktop-shelf-top-desk", "images/icons/icon_shelf_top_desk.png")
+ICON("preferences-position-bottom", "images/icons/icon_shelf_bottom.png")
+ICON("preferences-position-bottom-left", "images/icons/icon_shelf_bottom_left.png")
+ICON("preferences-position-bottom-right", "images/icons/icon_shelf_bottom_right.png")
+ICON("preferences-position-top", "images/icons/icon_shelf_top.png")
+ICON("preferences-position-top-left", "images/icons/icon_shelf_top_left.png")
+ICON("preferences-position-top-right", "images/icons/icon_shelf_top_right.png")
+ICON("preferences-position-left", "images/icons/icon_shelf_left.png")
+ICON("preferences-position-left-top", "images/icons/icon_shelf_left_top.png")
+ICON("preferences-position-left-bottom", "images/icons/icon_shelf_left_bottom.png")
+ICON("preferences-position-right", "images/icons/icon_shelf_right.png")
+ICON("preferences-position-right-top", "images/icons/icon_shelf_right_top.png")
+ICON("preferences-position-right-bottom", "images/icons/icon_shelf_right_bottom.png")
+ICON("system-file-manager","images/custom/cd_folder.png")
+ICON("modules-files","images/custom/cd_folder.png")
+ICON("folder","images/custom/cd_folder.png") 
+
+
+# ifdef ICON
+#  undef ICON
+# endif
+#define ICON(GROUP_NAME,SIZE,IMAGE_NAME)			\
+group {								\
+	name: "e/icons/"GROUP_NAME;				\
+	parts {							\
+		part {						\
+			name: "icon";				\
+			type: IMAGE;				\
+			repeat_events: 1;			\
+			description {				\
+				state: "default" 0.0;		\
+				max: SIZE;			\
+				aspect: 1.0 1.0; 		\
+				aspect_preference: BOTH;	\
+				image.normal: IMAGE_NAME;	\
+			}					\
+		}						\
+	} 							\
+}
+
+ICON("enlightenment/check", 16 16, "images/screen_im0.png")
+ICON("dialog-warning", 128 128, "images/icon_warning.png")
+ICON("dialog-error", 128 128, "images/icon_warning.png")
+
+# ifdef ICON
+#  undef ICON
+# endif
+#define ICON(GROUP_NAME,IMAGE_NAME) \
+group { \
+	name: "e/icons/enlightenment/"GROUP_NAME; \
+	min: 24 24; \
+	max: 24 24; \
+	parts { \
+		part { \
+			name: "screen"; \
+			type: IMAGE; \
+			mouse_events:  0; \
+			description { \
+				min: 24 24; \
+				max: 24 24; \
+				fixed: 1 1; \
+				state: "default" 0.0; \
+				aspect: 1.0 1.0; \
+				aspect_preference: BOTH; \
+				image { \
+					normal: IMAGE_NAME; \
+				} \
+			} \
+		} \
+	} \
+}
+
+/* Wallpaper fill and stretch icons */
+
+ICON("wallpaper_center", "images/icons/wallscreen_im2.png")
+ICON("wallpaper_scale_aspect_in", "images/icons/wallscreen_im5.png")
+ICON("wallpaper_scale_aspect_out", "images/icons/wallscreen_im3.png")
+ICON("wallpaper_stretch", "images/icons/wallscreen_im1.png")
+ICON("wallpaper_tile", "images/icons/wallscreen_im4.png")
+

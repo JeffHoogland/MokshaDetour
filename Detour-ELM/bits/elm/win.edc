@@ -1,0 +1,228 @@
+group { name: "elm/win/inwin/default";
+	parts {
+		BACKGROUND_OVERLAY;
+		part { name: "shad";
+			mouse_events:  0;
+			description { state: "default" 0.0;
+				image.normal: "images/comp/comp-sh1.png";
+				image.border: 35 35 35 35;
+				image.middle: 0;
+				rel1.to: "elm.swallow.content";
+				rel1.offset: -35  -35;
+				rel2.to: "elm.swallow.content";
+				rel2.offset: 34 34;
+				fill.smooth: 0;
+			}
+		}
+		part { name: "pop";
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "elm.swallow.content";
+				rel2.to: "elm.swallow.content";
+				image {
+					normal: "images/menu_im0.png";
+					border: 1 1 1 1;
+					middle: 0;
+				}
+				color_class: "dialog_base";
+			}
+		}
+		part { name: "popover";
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1.to: "pop";
+				rel2.to: "pop";
+				image.normal: "images/dialog_im0.png";
+				color_class: "dialog_base";
+				rel1.offset: 1 1;
+				rel2.offset: -2  -2;
+			}
+		}
+		part { name: "popover2";
+			type: RECT;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1.to: "popover";
+				rel2.to: "popover";
+				color: 0 0 0 20;
+			}
+		}
+		part { name: "elm.swallow.content";
+			type: SWALLOW;
+			description { state: "default" 0.0;
+				rel1.relative: 0.1 0.1;
+				rel2.relative: 0.9 0.9;
+			}
+		}
+	}
+	programs {
+		program { name: "show";
+			signal: "elm,action,show";
+			source: "elm";
+			action: STATE_SET "visible" 0.0;
+			//            transition: DECELERATE 0.5;
+			target: "base";
+		}
+		program { name: "hide";
+			signal: "elm,action,hide";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			//            transition: DECELERATE 0.5;
+			target: "base";
+		}
+	}
+}
+
+group { name: "elm/win/inwin/minimal";
+	parts {
+		BACKGROUND_OVERLAY;
+		part { name: "shad";
+			mouse_events:  0;
+			description { state: "default" 0.0;
+				image.normal: "images/comp/comp-sh1.png";
+				image.border: 35 35 35 35;
+				image.middle: 0;
+				rel1.to: "elm.swallow.content";
+				rel1.offset: -35  -35;
+				rel2.to: "elm.swallow.content";
+				rel2.offset: 34 34;
+				fill.smooth: 0;
+			}
+		}
+		part { name: "pop";
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "elm.swallow.content";
+				rel2.to: "elm.swallow.content";
+				image {
+					normal: "images/menu_im0.png";
+					border: 1 1 1 1;
+					middle: 0;
+				}
+				color_class: "dialog_base";
+			}
+		}
+		part { name: "popover";
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1.to: "pop";
+				rel2.to: "pop";
+				image.normal: "images/dialog_im0.png";
+				color_class: "dialog_base";
+				rel1.offset: 1 1;
+				rel2.offset: -2  -2;
+			}
+		}
+		part { name: "popover2";
+			type: RECT;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1.to: "popover";
+				rel2.to: "popover";
+				color: 0 0 0 20;
+			}
+		}
+		part { name: "elm.swallow.content";
+			type: SWALLOW;
+			description { state: "default" 0.0;
+				fixed: 1 1;
+				rel1.relative: 0.5 0.5;
+				rel2.relative: 0.5 0.5;
+			}
+		}
+	}
+	programs {
+		program { name: "show";
+			signal: "elm,action,show";
+			source: "elm";
+			action: STATE_SET "visible" 0.0;
+			//            transition: DECELERATE 0.5;
+			target: "base";
+		}
+		program { name: "hide";
+			signal: "elm,action,hide";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			//            transition: DECELERATE 0.5;
+			target: "base";
+		}
+	}
+}
+
+group { name: "elm/win/inwin/minimal_vertical";
+	parts {
+		BACKGROUND_OVERLAY;
+		part { name: "shad";
+			mouse_events:  0;
+			description { state: "default" 0.0;
+				image.normal: "images/comp/comp-sh1.png";
+				image.border: 35 35 35 35;
+				image.middle: 0;
+				rel1.to: "elm.swallow.content";
+				rel1.offset: -35  -35;
+				rel2.to: "elm.swallow.content";
+				rel2.offset: 34 34;
+				fill.smooth: 0;
+			}
+		}
+		part { name: "pop";
+			mouse_events: 1;
+			description { state: "default" 0.0;
+				rel1.to: "elm.swallow.content";
+				rel2.to: "elm.swallow.content";
+				image {
+					normal: "images/menu_im0.png";
+					border: 1 1 1 1;
+					middle: 0;
+				}
+				color_class: "dialog_base";
+			}
+		}
+		part { name: "popover";
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1.to: "pop";
+				rel2.to: "pop";
+				image.normal: "images/dialog_im0.png";
+				color_class: "dialog_base";
+				rel1.offset: 1 1;
+				rel2.offset: -2  -2;
+			}
+		}
+		part { name: "popover2";
+			type: RECT;
+			mouse_events: 0;
+			description { state: "default" 0.0;
+				rel1.to: "popover";
+				rel2.to: "popover";
+				color: 0 0 0 20;
+			}
+		}
+		part { name: "elm.swallow.content";
+			type: SWALLOW;
+			description { state: "default" 0.0;
+				fixed: 1 1;
+				rel1.relative: 0.1 0.5;
+				rel2.relative: 0.9 0.5;
+			}
+		}
+	}
+	programs {
+		program { name: "show";
+			signal: "elm,action,show";
+			source: "elm";
+			action: STATE_SET "visible" 0.0;
+			//            transition: DECELERATE 0.5;
+			target: "base";
+		}
+		program { name: "hide";
+			signal: "elm,action,hide";
+			source: "elm";
+			action: STATE_SET "default" 0.0;
+			//            transition: DECELERATE 0.5;
+			target: "base";
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////

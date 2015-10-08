@@ -1,0 +1,74 @@
+#define GROUP_ALIAS_ICON(Name, Alias, File, Min, Max)                   \
+   group { name: "elm/icon/"##Name##"/default"; min: Min Min; max: Max Max; \
+      alias: "elm/icon/"##Alias##"/default";                            \
+      images.image: File COMP; parts { part { name: "base";             \
+            description { aspect: 1.0 1.0; aspect_preference: BOTH;     \
+               image.normal: File; } } } }
+               
+#define GROUP_ALIAS_ICON1(Name, Alias, File, Min, Max)                   \
+   group { name: "elm/icon/"##Name##"/default"; min: Min Min; max: Max Max; \
+      alias: "elm/icon/"##Alias##"/default";                            \
+      parts { part { name: "base";             							\
+            description { aspect: 1.0 1.0; aspect_preference: BOTH;     \
+               image.normal: File; } } } }
+
+#define GROUP_ICON(Name, File, Min, Max)                      \
+   group { name: "elm/icon/"##Name##"/default"; min: Min Min; max: Max Max; \
+      images.image: File COMP; parts { part { name: "base";             \
+            description { aspect: 1.0 1.0; aspect_preference: BOTH;     \
+               image.normal: File; } } } }
+               
+#define GROUP_ICON1(Name, File, Min, Max)                      \
+   group { name: "elm/icon/"##Name##"/default"; min: Min Min; max: Max Max; \
+      parts { part { name: "base";							             \
+            description { aspect: 1.0 1.0; aspect_preference: BOTH;     \
+               image.normal: File; } } } }
+
+group { name: "elm/icon/arrow_down/default";
+   alias: "elm/icon/toolbar/arrow_down/default";
+   alias: "elm/icon/toolbar/more_menu/default"; min: 32 32;
+   parts { part { name: "base";
+         description { state: "default" 0.0; aspect: 1.0 1.0; aspect_preference: BOTH;
+            image.normal: "images/elm/icon_arrow_down.png"; } } } }
+
+GROUP_ALIAS_ICON1("arrow_up", "toolbar/arrow_up", "images/elm/icon_arrow_up.png", 32, 0);
+GROUP_ALIAS_ICON1("arrow_left", "toolbar/arrow_left", "images/elm/icon_arrow_left.png", 32, 0);
+GROUP_ALIAS_ICON1("arrow_right", "toolbar/arrow_right", "images/elm/icon_arrow_right.png", 32, 0);
+
+
+GROUP_ALIAS_ICON("home", "toolbar/home", "images/elm/icon_home.png", 32, 0);
+GROUP_ALIAS_ICON("close", "toolbar/close", "images/elm/icon_close.png", 32, 0);
+GROUP_ALIAS_ICON("apps", "toolbar/apps", "images/elm/icon_apps.png", 32, 0);
+GROUP_ALIAS_ICON("chat", "toolbar/chat", "images/elm/icon_chat.png", 32, 0);
+GROUP_ALIAS_ICON("clock", "toolbar/clock", "images/elm/icon_clock.png", 32, 0);
+GROUP_ALIAS_ICON("delete", "toolbar/delete", "images/elm/icon_delete.png", 32, 0);
+GROUP_ALIAS_ICON("edit", "toolbar/edit", "images/elm/icon_edit.png", 32, 0);
+GROUP_ALIAS_ICON("refresh", "toolbar/refresh", "images/elm/icon_refresh.png", 32, 0);
+GROUP_ALIAS_ICON("folder", "toolbar/folder", "images/elm/icon_folder.png", 32, 0);
+GROUP_ALIAS_ICON("file", "toolbar/file", "images/elm/icon_file.png", 32, 0);
+///////////////////////////////////////////////////////////////////////////////
+GROUP_ICON("menu/home", "images/elm/icon_home.png", 24, 24);
+GROUP_ICON("menu/close", "images/elm/icon_close.png", 24, 24);
+GROUP_ICON("menu/apps", "images/elm/icon_apps.png", 24, 24);
+GROUP_ICON1("menu/arrow_up", "images/elm/icon_arrow_up.png", 24, 24);
+GROUP_ICON1("menu/arrow_down", "images/elm/icon_arrow_down.png", 24, 24);
+GROUP_ICON1("menu/arrow_left", "images/elm/icon_arrow_left.png", 24, 24);
+GROUP_ICON1("menu/arrow_right", "images/elm/icon_arrow_right.png", 24, 24);
+GROUP_ICON("menu/chat", "images/elm/icon_chat.png", 24, 24);
+GROUP_ICON("menu/clock", "images/elm/icon_clock.png", 24, 24);
+GROUP_ICON("menu/delete", "images/elm/icon_delete.png", 24, 24);
+GROUP_ICON("menu/edit", "images/elm/icon_edit.png", 24, 24);
+GROUP_ICON("menu/refresh", "images/elm/icon_refresh.png", 24, 24);
+GROUP_ICON("menu/folder", "images/elm/icon_folder.png", 24, 24);
+GROUP_ICON("menu/file", "images/elm/icon_file.png", 24, 24);
+
+GROUP_ICON("media_player/forward", "images/elm/mp_forward.png", 16, 0);
+GROUP_ICON("media_player/info", "images/elm/mp_info.png", 16, 0);
+GROUP_ICON("media_player/next", "images/elm/mp_next.png", 16, 0);
+GROUP_ICON("media_player/pause", "images/elm/mp_pause.png", 16, 0);
+GROUP_ICON("media_player/play", "images/elm/mp_play.png", 16, 0);
+GROUP_ICON("media_player/prev", "images/elm/mp_prev.png", 16, 0);
+GROUP_ICON("media_player/rewind", "images/elm/mp_rewind.png", 16, 0);
+GROUP_ICON("media_player/stop", "images/elm/mp_stop.png", 16, 0);
+
+///////////////////////////////////////////////////////////////////////////////
