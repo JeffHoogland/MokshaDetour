@@ -249,9 +249,6 @@ group {
 			}
 		}
 	}
-	programs {
-#include "shelf_programs.edc"
-	}
 }
 group {
 	name: "e/shelf/default/inset";
@@ -509,9 +506,6 @@ group {
 				inherit: "right" 0.0;
 			}
 		}
-	}
-	programs {		
-#include "shelf_programs.edc"
 	}
 }
 group {

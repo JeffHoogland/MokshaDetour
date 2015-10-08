@@ -1,2 +1,2 @@
 #!/bin/sh
-edje_cc $@ -id . -fd . main.edc -o detourious.edj
+edje_cc $@ -id . -fd . main.edc -o ../Detour-ELM.edj

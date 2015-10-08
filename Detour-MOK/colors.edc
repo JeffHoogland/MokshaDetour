@@ -14,7 +14,7 @@ color_class {
 	/* red */
 	//color: 169 47 38 255;
 
-	color: 151 208 5 255;
+	color: 113 151 213 255;
 	
 	color3: 255 255 255 128;					
 }
@@ -55,11 +55,35 @@ color_class {
 }
 color_class {
 	name: "border_frame";
-	color: 205 205 205 255;
+	color: 226 226 226 255;
 }
 color_class {
 	name: "border_frame_active";
-	color: 215 215 215 255;
+	color: 211 211 211 255;
+}
+color_class {
+	name: "border_frame_post";
+	color: 160 160 160 30;
+}
+color_class {
+	name: "border_frame_active_post";
+	color: 211 211 211 0;
+}
+color_class {
+	name: "border_buttons_post";
+	color: 255 255 255 190;
+}
+color_class {
+	name: "border_buttons_post_active";
+	color: 255 255 255 255;
+}
+color_class {
+	name: "scroller_drag";
+	color: 255 255 255 255;
+}
+color_class {
+	name: "disk_selector";
+	color: 79 79 79 255;
 }
 color_class {
 	name: "menu_base";
@@ -71,6 +95,15 @@ color_class {
 	color: 208 9 9 255;
 	color2: 208 9 9 255;
 	color3: 208 9 9 255;
+}
+color_class {
+	name: "progress_bar1";
+	color: 255 255 255 150;
+}
+color_class {
+	name: "shelf_base_disabled";
+	color: 240 240 240 255;
+	color3: 0 0 0 0;
 }
 #else
 color_class {
@@ -95,6 +128,14 @@ color_class {
 	name: "border_frame_active";
 	color: 50 50 50 255;
 	color3: 255 255 255 255;
+}
+color_class {
+	name: "border_frame_post";
+	color: 0 0 0 0;
+}
+color_class {
+	name: "border_frame_active_post";
+	color: 0 0 0 0;
 }
 color_class {
 	name: "border_title";
@@ -152,6 +193,16 @@ color_class {
 	color3: 0 0 0 0;
 }
 color_class {
+	name: "shelf_base";
+	color: 180 180 180 255;
+	color3: 0 0 0 0;
+}
+color_class {
+	name: "shelf_base_disabled";
+	color: 165 165 165 255;
+	color3: 0 0 0 0;
+}
+color_class {
 	name: "button_text";
 	color: 20 20 20 255;
 	color3: 228 228 228 97;
@@ -173,7 +224,7 @@ color_class {
 }
 color_class {
 	name: "menu_base";
-	color: 218 218 218 228;
+	color: 210 210 210 228;
 	color3: 0 0 0 0;
 }
 color_class {
@@ -181,6 +232,26 @@ color_class {
 	color: 208 9 9 255;
 	color2: 208 9 9 255;
 	color3: 208 9 9 255;
+}
+color_class {
+	name: "scroller_drag";
+	color: 0 0 0 255;
+}
+color_class {
+	name: "disk_selector";
+	color: 0 0 0 255;
+}
+color_class {
+	name: "fileman_arrow";
+	color: 120 120 120 255;
+}
+color_class {
+	name: "progress_bar";
+	color: 120 120 120 255;
+}
+color_class {
+	name: "progress_bar1";
+	color: 120 120 120 150;
 }
 
 #endif
