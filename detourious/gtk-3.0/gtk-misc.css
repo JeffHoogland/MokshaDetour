@@ -15,9 +15,9 @@ GtkAssistant .sidebar .highlight {
 }
 
 GtkAssistant .sidebar {
-	padding: 12;
-	border-width: 1;
-	border-radius: 2;
+	padding: 12px;
+	border-width: 1px;
+	border-radius: 2px;
 	border-style: solid;
 	border-color: @inactive_frame_color;
 	color: mix (@theme_fg_color, @theme_bg_color, 0.40);
@@ -47,14 +47,14 @@ GtkAssistant .sidebar {
 /* View */
 GtkViewport,
 GtkIconView {
-	border-radius: 2;
+	border-radius: 2px;
 	padding: 0;
 }
 
 GtkIconView.view.cell:selected,
 GtkIconView.view.cell:selected:focused {
 	background-color: @theme_selected_bg_color;
-	border-radius: 2;
+	border-radius: 2px;
 }
 
 .view {
@@ -66,10 +66,10 @@ GtkIconView.view.cell:selected:focused {
 
 /* Calendars */
 GtkCalendar.view {
-	border-radius: 2;
+	border-radius: 2px;
 	border-style: solid;
-	border-width: 1;
-	padding: 2;
+	border-width: 1px;
+	padding: 2px;
 }
 
 GtkCalendar.header {
@@ -111,8 +111,6 @@ PanelToplevel {
 		to (shade (@dark_bg_color, 1.05)));
 	color: @dark_fg_color;
 	border-radius: 0;
-	-unico-inner-stroke-style: none;
-	-unico-outer-stroke-style: none;
 	text-shadow: none;
 	padding: 0;
 	border-width:0;
@@ -133,7 +131,7 @@ PanelMenuBar.menubar.menuitem {
 
 ClockBox {
 	color: @dark_fg_color;
-	text-shadow: 0 -1 shade (@fg_color, 1.0);
+	text-shadow: 0px -1px shade (@fg_color, 1.0);
 }
 
 PanelApplet > GtkMenuBar.menubar.menuitem:prelight,
@@ -152,8 +150,6 @@ PanelApplet .button {
 	background-image: none;
 	color: @dark_fg_color;
 	border-radius: 0;
-	-unico-inner-stroke-style: none;
-	-unico-outer-stroke-style: none;
 	text-shadow: none;
 	border-width:0;
 	background-image: -gtk-gradient (linear, left top, left bottom,

@@ -1,0 +1,167 @@
+/*******************
+ * check and radio *
+ *******************/
+.check,
+.radio,
+.check:insensitive,
+.radio:insensitive {
+    background-color: transparent;
+    border-style: none;
+    color: @theme_text_color;
+    padding: 5px;
+}
+
+GtkCheckButton:hover,
+GtkCheckButton:active:hover,
+GtkCheckButton:selected,
+GtkCheckButton:selected:focus {
+    background-color: transparent;
+    color: @theme_text_color;
+}
+
+.check,
+.check row:selected,
+.check row:selected:focus {
+	-gtk-icon-source: url("images/Check-Radio/checkbox-unchecked.png");
+	icon-shadow: none;
+}
+
+.check:hover,
+.check row:selected:hover,
+.check row:selected:focus:hover {
+	-gtk-icon-source: url("images/Check-Radio/checkbox-unchecked-hover.png");
+	icon-shadow: none;
+}
+
+.check:insensitive,
+.check row:selected:insensitive,
+.check row:selected:focus:insensitive {
+	-gtk-icon-source: url("images/Check-Radio/checkbox-unchecked-insensitive.png");
+	icon-shadow: none;
+}
+
+.check:active,
+.check:checked,
+.check row:selected:active,
+.check row:selected:focus:active {
+	-gtk-icon-source: url("images/Check-Radio/checkbox-checked.png");
+	icon-shadow: none;
+}
+
+.check:active:hover,
+.check:checked:hover,
+.check row:selected:active:hover,
+.check row:selected:focus:active:hover {
+	-gtk-icon-source: url("images/Check-Radio/checkbox-checked-hover.png");
+	icon-shadow: none;
+}
+
+.check:active:insensitive,
+.check:checked:insensitive,
+.check row:selected:active:insensitive,
+.check row:selected:focus:active:insensitive {
+	-gtk-icon-source: url("images/Check-Radio/checkbox-checked-insensitive.png");
+	icon-shadow: none;
+}
+
+.check:inconsistent,
+.check row:selected:inconsistent,
+.check row:selected:focus:inconsistent {
+	-gtk-icon-source: url("images/Check-Radio/checkbox-mixed.png");
+	icon-shadow: none;
+}
+
+.check:inconsistent:hover,
+.check row:selected:inconsistent:hover,
+.check row:selected:focus:inconsistent:hover {
+	-gtk-icon-source: url("images/Check-Radio/checkbox-mixed-hover.png");
+	icon-shadow: none;
+}
+
+.check:inconsistent:insensitive,
+.check row:selected:inconsistent:insensitive,
+.check row:selected:focus:inconsistent:insensitive {
+	-gtk-icon-source: url("images/Check-Radio/checkbox-mixed-insensitive.png");
+	icon-shadow: none;
+}
+
+.radio,
+.radio row:selected,
+.radio row:selected:focus {
+	-gtk-icon-source: url("images/Check-Radio/option-unchecked.png");
+	icon-shadow: none;
+}
+
+.radio:hover,
+.radio row:selected:hover,
+.radio row:selected:focus:hover {
+	-gtk-icon-source: url("images/Check-Radio/option-unchecked-hover.png");
+	icon-shadow: none;
+}
+
+.radio:insensitive,
+.radio row:selected:insensitive,
+.radio row:selected:focus:insensitive {
+	-gtk-icon-source: url("images/Check-Radio/option-unchecked-insensitive.png");
+	icon-shadow: none;
+}
+
+.radio:active,
+.radio:checked,
+.radio row:selected:active,
+.radio row:selected:focus:active {
+	-gtk-icon-source: url("images/Check-Radio/option-checked.png");
+	icon-shadow: none;
+}
+
+.radio:active:hover,
+.radio:checked:hover,
+.radio row:selected:active:hover,
+.radio row:selected:focus:active:hover {
+	-gtk-icon-source: url("images/Check-Radio/option-checked-hover.png");
+	icon-shadow: none;
+}
+
+.radio:active:insensitive,
+.radio:checked:insensitive,
+.radio row:selected:active:insensitive,
+.radio row:selected:focus:active:insensitive {
+	-gtk-icon-source: url("images/Check-Radio/option-checked-insensitive.png");
+	icon-shadow: none;
+}
+
+.radio:inconsistent,
+.radio row:selected:inconsistent,
+.radio row:selected:focus:inconsistent {
+	-gtk-icon-source: url("images/Check-Radio/option-mixed.png");
+	icon-shadow: none;
+}
+
+.radio:inconsistent:hover,
+.radio row:selected:inconsistent:hover,
+.radio row:selected:focus:inconsistent:hover {
+	-gtk-icon-source: url("images/Check-Radio/option-mixed-hover.png");
+	icon-shadow: none;
+}
+
+.radio:inconsistent:insensitive,
+.radio row:selected:inconsistent:insensitive,
+.radio row:selected:focus:inconsistent:insensitive {
+	-gtk-icon-source: url("images/Check-Radio/option-mixed-insensitive.png");
+	icon-shadow: none;
+}
+
+/***************
+ * progressbar *
+ ***************/
+.progressbar,
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focus {
+    background-image: url("images/progress-horizontal.png");
+}
+
+.progressbar.vertical {
+    background-image: url("images/progress-vertical.png");
+}

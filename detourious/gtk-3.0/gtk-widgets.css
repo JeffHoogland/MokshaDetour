@@ -1,12 +1,17 @@
 * {
-	-GtkButton-child-displacement-x: 1;
-	-GtkButton-child-displacement-y: 1;
-	-GtkButton-default-border: 0;
-	-GtkButton-image-spacing: 0;
-	-GtkButton-interior-focus: true;
-	-GtkButton-inner-border: 3;
-	-GtkCheckButton-indicator-size: 16;
-	-GtkCheckMenuItem-indicator-size: 14;
+	background-clip: padding-box;
+    background-origin: border-box;
+	
+	-GtkButton-child-displacement-x: 0;
+    -GtkButton-child-displacement-y: 0;
+    -GtkButton-default-border: 0;
+    -GtkButton-image-spacing: 0;
+    -GtkButton-inner-border: 1;
+    -GtkButton-interior-focus: true;
+    -GtkDialog-button-spacing: 0;
+    -GtkDialog-action-area-border: 5;
+	-GtkCheckButton-indicator-size: 18;
+	-GtkCheckMenuItem-indicator-size: 18;
 	-GtkComboBox-arrow-scaling: 0.5;
 	/* -GtkComboBox-shadow-type: 2; */
 	-GtkEntry-inner-border: 2;
@@ -19,12 +24,16 @@
 	-GtkMenu-vertical-padding: -1;  
 	-GtkMenuItem-arrow-scaling: 0.5;
 	-GtkMenuBar-internal-padding: 0;
-	-GtkNotebook-tab-overlap: -1;
-	-GtkPaned-handle-size: 0;
-	-GtkProgressBar-min-horizontal-bar-height: 10;
-	-GtkProgressBar-min-vertical-bar-width: 10;
+	-GtkNotebook-tab-overlap: 1;
+	-GtkNotebook-tab-curvature: 0;
+    -GtkNotebook-initial-gap: 0;
+    -GtkNotebook-arrow-spacing: 5;
+    -GtkNotebook-has-tab-gap: true;
+ 	-GtkPaned-handle-size: 0;
+	-GtkProgressBar-min-horizontal-bar-height: 16;
+	-GtkProgressBar-min-vertical-bar-width: 16;
 	-GtkRange-trough-border: 1;
-	-GtkRange-slider-width: 11;
+	-GtkRange-slider-width: 12;
 	-GtkRange-stepper-size: 13;
 	-GtkRange-trough-under-steppers: 1;
 	-GtkRange-stepper-spacing: 0;
@@ -32,7 +41,7 @@
 	-GtkScale-trough-side-details: 1;
 	-GtkScrollbar-activate-slider: 1;
 	-GtkScrollbar-trough-border: 0;
-	-GtkScrollbar-slider-width: 11;
+	-GtkScrollbar-slider-width: 20;
 	-GtkScrollbar-min-slider-length: 30;
 	-GtkScrollbar-has-forward-stepper: 0;
 	-GtkScrollbar-has-backward-stepper: 0;
@@ -48,26 +57,24 @@
 	-GtkTreeView-expander-size: 4;
 	-GtkTreeView-vertical-separator: 0;
 	-GtkWidget-wide-separators: 1;
-	-GtkWidget-separator-width: 2;
-	-GtkWidget-separator-height: 2;
+	-GtkWidget-separator-width: 1;
+	-GtkWidget-separator-height: 1;
+	-GtkWidget-wide-separators: false;
 	-GtkWidget-focus-padding: 0;
 	-GtkWidget-focus-line-width: 1;
 	-GtkWidget-link-color: @link_color;
 	-GtkWidget-visited-link-color: @link_color;
-	-GtkWindow-resize-grip-width: 0;
-	-GtkWindow-resize-grip-height: 0;
+	-GtkWindow-resize-grip-width: 14;
+	-GtkWindow-resize-grip-height: 14;
 	-WnckTasklist-fade-overlay-rect: 0;
 
-	border-width: 1;
-	padding: 1;
+	border-width: 1px;
+	/*padding: 1;*/
+	
+	outline-color: alpha(@theme_fg_color, 0.3);
+    outline-style: dashed;
+    outline-offset: 2px;
 
-	engine: unico;
-
-	-unico-inner-stroke-color: rgba (0, 0, 0, 0);
-	-unico-focus-border-color: alpha (#fff, 0.0);
-	-unico-focus-border-radius: 2;
-	-unico-focus-fill-color: alpha (#fff, 0.0);
-	-unico-focus-outer-stroke-color: alpha (#fff, 0.0);
 }
 
 /***************
@@ -76,20 +83,22 @@
 
 GtkWindow {
 	color: @theme_fg_color;
+	background-color: @theme_bg_color;
 }
 
+/*
 * {
 	background-color: @theme_bg_color;
-	-unico-inner-stroke-style: none;
-	-unico-outer-stroke-style: none;
 }
+*/
 
 *:hover {
-	background-color: shade (@theme_bg_color, 1.02);
+	/*background-color: shade (@theme_bg_color, 1.02);*/
 	color: @theme_fg_color;
 }
 
-*:selected {
+*:selected,
+*:selected:focus {
 	background-color: @theme_selected_bg_color;
 	color: @theme_selected_fg_color;
 }
@@ -100,7 +109,7 @@ GtkWindow {
 }
 
 *:insensitive {
-	background-color: @insensitive_bg_color;
+	/*background-color: @insensitive_bg_color;*/
 	color: @insensitive_fg_color;
 	border-color: @insensitive_border_color;
 }
@@ -109,6 +118,16 @@ GtkWindow {
 	background-color: shade (@theme_bg_color, 0.915);
 }
 
+GtkPaned {
+    background-color: @theme_bg_color;
+}
+
+GtkEventBox {
+    background-color: @theme_bg_color;
+}
+
+
+
 .background {
 	border-style: none;
 	border-width: 0;
@@ -116,11 +135,14 @@ GtkWindow {
 }
 
 .tooltip {
-	padding: 4 4;
+	padding: 4px 4px;
 	border-style: solid;
-	border-width: 1;
+	border-width: 1px;
 	border-color: shade (@theme_tooltip_bg_color, 0.80);
-	background-color: @theme_tooltip_bg_color;
+	/*background-color: @theme_tooltip_bg_color;*/
+	background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_tooltip_bg_color, 1.2)),
+                                     to (shade(@theme_tooltip_bg_color, 0.9)));
 	color: @theme_tooltip_fg_color;
 }
 
@@ -132,8 +154,8 @@ GtkWindow {
 	background-color: alpha (@theme_selected_bg_color, 0.35);
 	border-color: @theme_selected_bg_color;
 	border-style: solid;
-	border-width: 1;
-	border-radius: 2;
+	border-width: 1px;
+	border-radius: 2px;
 }
 
 .pane-separator {
@@ -148,11 +170,130 @@ GtkWindow {
 }
 
 GtkStatusbar {
-	padding: 5;
+	padding: 5px;
 	color: @theme_fg_color;
 	-GtkStatusbar-shadow-type: none;
 }
 
 GtkStatusbar .frame {
 	border-width: 0;
+}
+
+/***********
+ * spinner *
+ ***********/
+@keyframes spin {
+	to {
+		-gtk-icon-transform: rotate(1turn); } }
+
+.spinner {
+	background-image: none;
+	background-color: blue;
+	opacity: 0;
+	-gtk-icon-source: -gtk-icontheme("process-working-symbolic"); }
+
+.spinner:active {
+    opacity: 1;
+    animation: spin 1s linear infinite; }
+
+.spinner:active:insensitive {
+	opacity: 0.5; }
+
+GtkTextView {
+	-GtkTreeView-expander-size:11px;
+	-GtkTreeView-indicator-size:11px;
+	background-color: shade (@theme_bg_color, 0.8);
+	color: #000;
+}
+
+/*************************
+ * Touch text selections *
+ *************************/
+.popover {
+    border-radius: 3px;
+    background-clip: border-box;
+    border-color: shade(@theme_base_color, 0.5);
+    border-width: 1px;
+    border-style: solid;
+    box-shadow: 0 1px 4px #000;
+    margin: 10px;
+    padding: 2px;
+    color: @theme_text_color;
+    background-color: shade(@theme_bg_color, 1.05);
+}
+
+.popover.osd {
+    background-color: @selected_bg_color;
+    border-color: @theme_bg_color;
+    box-shadow: 0 2px 8px 3px #000;
+    color: @selected_fg_color;
+}
+
+.popover > .list,
+.popover > .view,
+.popover > .toolbar {
+	border: none;
+    background-color: transparent;
+}
+
+.popover.osd > .toolbar .button {
+    border-radius: 0px;
+    border-width: 0px;
+    background-image: none;
+    background-color: transparent;
+}
+
+.popover .button.flat,
+.popover .button.flat:hover {
+    transition: none;
+}
+
+.popover .separator {
+    font-size: 80%;
+    font-weight: bold;
+    color: alpha(@theme_text_color,0.1);
+    text-shadow: none;
+    background-color: transparent;
+    icon-shadow: none;
+    border: 0;
+}
+
+/*************************
+ * Stack switcher *
+ *************************/
+.stack-switcher > .button {
+	outline-offset: -3px;
+}
+.stack-switcher > .button > GtkLabel {
+	padding-left: 6px;
+	padding-right: 6px;
+}
+.stack-switcher > .button > GtkImage {
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.stack-switcher > .button.text-button {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 4px;
+	padding-bottom: 5px;
+}
+.stack-switcher > .button.image-button {
+	padding: 1px 3px;
+}
+.stack-switcher > .button.needs-attention:active > GtkLabel, .stack-switcher > .button.needs-attention:active > GtkImage, .stack-switcher > .button.needs-attention:checked > GtkLabel, .stack-switcher > .button.needs-attention:checked > GtkImage {
+	animation: none;
+	background-image: none;
+}
+.stack-switcher > .button.needs-attention > GtkLabel, .stack-switcher > .button.needs-attention > GtkImage, .button .sidebar-item.needs-attention > GtkLabel {
+	animation: needs_attention 150ms ease-in;
+	background-image: -gtk-gradient(radial, center center, 0, center center, 0.5, to(#4080fb), to(transparent)), -gtk-gradient(radial, center center, 0, center center, 0.5, to(rgba(255, 255, 255, 0.2)), to(transparent));
+	background-size: 6px 6px, 6px 6px;
+	background-repeat: no-repeat;
+	background-position: right 3px, right 4px;
+}
+.stack-switcher > .button.needs-attention > GtkLabel:dir(rtl), .stack-switcher > .button.needs-attention > GtkImage:dir(rtl), .button .sidebar-item.needs-attention > GtkLabel:dir(rtl) {
+	background-position: left 3px, left 4px;
 }

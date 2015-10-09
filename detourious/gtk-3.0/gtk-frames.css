@@ -5,19 +5,11 @@
 .button,
 .frame,
 .notebook {
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 0.7)),
-		to (shade (@theme_bg_color, 0.7)));
-	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@theme_bg_color, 1.26), 0.2);
 }
 
 .button:insensitive,
 .frame:insensitive,
 .notebook:insensitive {
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 0.8)),
-		to (shade (@theme_bg_color, 0.8)));                         
 }
 
 /* inset */
@@ -26,10 +18,6 @@
 .check,
 .entry,
 .radio {
-	-unico-outer-stroke-style: custom;
-	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (alpha (shade (@theme_bg_color, 0.9), 0.6)),
-		to (alpha (shade (@theme_bg_color, 1.05), 0.6)));
 }
 
 /* shadow */
@@ -40,25 +28,20 @@
 .notebook .button,
 .notebook,
 .radio:active {
-	-unico-outer-stroke-style: custom;
-	-unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (alpha (shade (@theme_bg_color, 0.05), 0.05)),
-		to (alpha (shade (@theme_bg_color, 0.05), 0.09)));
 }
 
 /* frame */
 .frame {
 	border-radius: 0;
-	-unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
-		from (shade (@theme_bg_color, 0.8)),
-		to (shade (@theme_bg_color, 0.8)));	
+	border-style: solid;
+    border-color: shade (@theme_bg_color, 0.85);
 }
 
 /* GtkScrolledWindow */
 GtkScrolledWindow.frame {
 	border-style: solid;
 	border-color: @internal_element_color;
-	border-width: 1;
+	border-width: 1px;
 	border-radius: 0;
 }
 
@@ -68,73 +51,244 @@ GtkScrolledWindow.frame {
 .entry,
 .toolbar.entry {
 	background-color: @theme_base_color;
-	background-image: -gtk-gradient (linear,
+	/*background-image: -gtk-gradient (linear,
 		left top, left bottom,
 		from (shade (@theme_base_color, 0.82)),
 		color-stop (0.12, shade (@theme_base_color, 0.98)),
 		color-stop (0.16, shade (@theme_base_color, 1.0)),
-		to (@theme_base_color));
-	border-radius: 2;
-	border-width: 1;
+		to (@theme_base_color));*/
+	color: @theme_text_color;
+	border-radius: 5px;
+    border-width: 3px;
+	background-image: none;
 	border-style: solid;
-	-unico-border-gradient: -gtk-gradient (linear,
-		left top, left bottom,
-		from (shade (@theme_border_color_b, 1.00)),
-		to (shade (@theme_border_color_a, 1.00)));
-	padding: 2;
+	border-image: url("images/Entry/entry.png") 7 / 7px stretch;
+	padding: 3px;
 }
 
 .entry:focused {
-	border-color: @theme_selected_bg_color;
-	-unico-border-gradient: none;
+	/*border-color: @theme_selected_bg_color;*/
+	border-image: url("images/Entry/entry-in.png") 7 / 7px stretch;
 }
+
+ .entry:selected,
+ .entry:selected:focused {
+     background-color: @selected_bg_color;
+     color: @selected_fg_color;
+ }
 
 .entry:insensitive {
 	background-color: @insensitive_bg_color;
-	-unico-border-gradient: -gtk-gradient (linear,
-		left top, left bottom,
-		from (shade (@inactive_frame_border_a, 1.00)),
-		to (shade (@inactive_frame_border_b, 1.00)));
 }
 
 .entry.progressbar {
-	background-color: @theme_selected_bg_color;
-	color: @theme_selected_fg_color;
-	border-width: 1;
-	border-radius: 1;
-	border-color: @progressbar_border;
+    margin: 0 2px 3px 2px;
+    border-radius: 0;
+    border-width: 0 0 2px;
+    border-color: #4080fb;
+    border-style: solid;
+    background-image: none;
+    background-color: transparent;
+    box-shadow: none;
+    border-image: none;
 }
+
+.entry.image.left {
+    padding-left: 0;
+}
+
+.entry.image.right {
+    padding-right: 0;
+}
+
+/******************
+ * combobox entry *
+ ******************/
+
+.linked .entry, GtkComboBox.combobox-entry .entry {
+	border-image: url("images/Entry/middle-entry.png") 7 1 7 1/7px 1px 7px 1px stretch;
+	border-radius: 0;
+	border-width: 3px 0 3px 0;
+	border-style: solid;
+	border-color: transparent;
+	padding: 3px; }
+
+.linked .entry:focus, GtkComboBox.combobox-entry .entry:focus {
+    border-image: url("images/Entry/middle-entry-in.png") 7 1 7 1/7px 1px 7px 1px stretch;
+    border-radius: 0;
+    border-width: 3px 0 3px 0;
+    border-style: solid;
+    border-color: transparent;
+    padding: 3px; }
+
+.linked .entry:first-child, GtkComboBox.combobox-entry .entry:first-child {
+	border-image: url("images/Entry/left-entry.png") 7 1 7 7/7px 1px 7px 7px stretch;
+	border-radius: 5px 0 5px 5px;
+	border-width: 3px 0 3px 3px;
+	border-style: solid;
+	border-color: transparent;
+	padding: 3px; }
+
+.linked .entry:first-child:focus, GtkComboBox.combobox-entry .entry:first-child:focus {
+    border-image: url("images/Entry/left-entry-in.png") 7 1 7 7/7px 1px 7px 7px stretch;
+    border-radius: 5px 0 5px 5px;
+	border-width: 3px 0 3px 3px;
+    border-style: solid;
+    border-color: transparent;
+    padding: 3px; }
+  
+.linked .entry:last-child, GtkComboBox.combobox-entry .entry:last-child {
+	border-image: url("images/Entry/right-entry.png") 7 7 7 1/7px 7px 7px 1px stretch;
+	border-radius: 5px 5px 5px 0;
+	border-width: 3px 3px 3px 0;
+	border-style: solid;
+	border-color: transparent;
+	padding: 3px; }
+
+.linked .entry:last-child:focus, GtkComboBox.combobox-entry .entry:last-child:focus {
+    border-image: url("images/Entry/right-entry-in.png") 7 7 7 1/7px 7px 7px 1px stretch;
+	border-radius: 5px 5px 5px 0;
+	border-width: 3px 3px 3px 0;
+	border-style: solid;
+	border-color: transparent;
+	padding: 3px; }
+ 
+.linked .entry:only-child, GtkComboBox.combobox-entry .entry:only-child {
+	border-image: url("images/Entry/entry.png") 7 / 7px stretch;
+	border-radius: 5px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: transparent;
+	padding: 3px; }
+	
+.linked .entry:only-child:focus, GtkComboBox.combobox-entry .entry:only-child:focus {
+    border-image: url("images/Entry/entry-in.png") 7 / 7px stretch;
+	border-radius: 5px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: transparent;
+	padding: 3px; }
+
+.linked.vertical .entry, .spinbutton.vertical.entry, .spinbutton.vertical.entry:dir(rtl), .spinbutton.vertical.entry:dir(ltr) {
+	box-shadow: none;
+	border-image: url("images/Entry/middle-vertical-entry.png") 1 7 1 7/1px 7px 1px 7px stretch;
+	border-radius: 0;
+	border-width: 0 3px 0 3px;
+	border-style: solid;
+	border-color: transparent;
+	padding: 3px; }
+
+.linked.vertical .entry:focus, .spinbutton.vertical.entry:focus {
+    box-shadow: none;
+	border-image: url("images/Entry/middle-vertical-entry-in.png") 1 7 1 7/1px 7px 1px 7px stretch;
+	border-radius: 0;
+	border-width: 0 3px 0 3px;
+	border-style: solid;
+	border-color: transparent;
+	padding: 3px; }
+
+.linked.vertical .entry:first-child {
+	border-image: url("images/Entry/top-vertical-entry.png") 7 7 1 7/7px 7px 1px 7px stretch;
+	border-radius: 5px 5px 0 0;
+	border-width: 3px 3px 0 3px;
+	border-style: solid;
+	border-color: transparent;
+	padding: 3px; }
+
+.linked.vertical .entry:first-child:focus {
+	border-image: url("images/Entry/top-vertical-entry-in.png") 7 7 1 7/7px 7px 1px 7px stretch;
+	border-radius: 5px 5px 0 0;
+	border-width: 3px 3px 0 3px;
+	border-style: solid;
+	border-color: transparent;
+	padding: 3px; }
+
+.linked.vertical .entry:last-child {
+	box-shadow: none;
+	border-image: url("images/Entry/bottom-vertical-entry.png") 1 7 7 7/1px 7px 7px 7px stretch;
+	border-radius: 0 0 5px 5px;
+	border-width: 0 3px 3px 3px;
+	border-style: solid;
+	border-color: transparent;
+	padding: 3px; }
+
+.linked.vertical .entry:last-child:focus {
+    box-shadow: none;
+    border-image: url("images/Entry/bottom-vertical-entry-in.png") 1 7 7 7/1px 7px 7px 7px stretch;
+    border-radius: 0 0 5px 5px;
+    border-width: 0 3px 3px 3px;
+    border-style: solid;
+    border-color: transparent;
+    padding: 3px; }
+
+.linked.vertical .entry:only-child {
+	border-image: url("images/Entry/entry.png") 7 / 7px stretch;
+	border-radius: 5px;
+	border-width: 3px 3px 3px 3px;
+	border-style: solid;
+	border-color: transparent;
+	padding: 3px; }
+
+.linked.vertical .entry:only-child:focus {
+    border-image: url("images/Entry/entry-in.png") 7 / 7px stretch;
+    border-radius: 5px;
+    border-width: 3px 3px 3px 3px;
+    border-style: solid;
+    border-color: transparent;
+    padding: 3px; }
+
+
+.primary-toolbar GtkComboBox.combobox-entry .button,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover,
+.primary-toolbar GtkComboBox.combobox-entry .button:active,
+.primary-toolbar GtkComboBox.combobox-entry .button:insensitive,
+GtkComboBox.combobox-entry .button,
+GtkComboBox.combobox-entry .button:hover,
+GtkComboBox.combobox-entry .button:active,
+GtkComboBox.combobox-entry .button:insensitive {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-width: 3px 3px 3px 0;
+    padding: 3px 3px 3px 0;
+ }
 
 /**************
  * Separators *
  **************/
-GtkSeparator {
-	border-style: solid;
-	border-color: alpha (@theme_bg_color, 0.9);
-	-unico-border-gradient: none;
-	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@theme_bg_color, 1.26), 0.3);
+.view.separator,
+.separator {
+    color: shade(@theme_bg_color, 0.8);
+    border-color: shade(@theme_bg_color, 0.8);
+    border-style: solid;
 }
 
-.button GtkSeparator {
-	border-style: solid;
-	border-color: alpha (@button_bg_color, 0.9);
-	-unico-inner-stroke-style: custom;
-	-unico-inner-stroke-color: alpha (shade (@button_bg_color, 1.26), 0.3);
+.button .separator,
+.button.separator {
+    border-color: shade (@theme_bg_color, 0.7);
+}
+
+.notebook .button .separator,
+.notebook .button.separator {
+    border-color: shade (@theme_bg_color, 0.7);
+}
+
+.button .separator:insensitive,
+.button.separator:insensitive {
+    border-color: shade (@theme_bg_color, 0.9);
 }
 
 .menuitem.separator {
-    padding: 0;
-    border-width: 2;
-    /* border-radius: 0; */
-    	border-style: solid;
-    	border-color: @bg_color;
-	/* background-image: url("images/menu-separator.png"); */
-	/* color: @theme_fg_color; */
+    -GtkMenuItem-horizontal-padding: 0;    
+    border: none;
+    color: shade(@theme_bg_color, 0.82);  
+}
 
-	-GtkWidget-separator-height: 2;
-	-GtkSeparatorMenuItem-horizontal-padding: 0;	
-	-unico-inner-stroke-style: none;
-	-unico-inner-stroke-color: alpha (@theme_fg_color, 0.3);
-
+/******************
+ * pane separator *
+ ******************/
+.pane-separator {
+    color: shade (@theme_bg_color, 0.7);
+    background-color: @theme_bg_color;
 }
