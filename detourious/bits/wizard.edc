@@ -1,0 +1,446 @@
+group { name: "e/wizard/main";
+   parts {
+      part { name: "clip"; type: RECT; mouse_events: 0;
+         description { state: "default" 0.0;
+         }
+      }
+      part { name: "bg";
+         description { state: "default" 0.0;
+			image.normal: "images/dialog_im0.png";
+            image.border: 0 0 3 1;
+            color_class: "dialog_base";
+         }
+      }
+      part { name: "bg2"; type: RECT;
+         description { state: "default" 0.0;
+			color: 0 0 0 20;
+         }
+      }
+      part { name: "busy_clip"; type: RECT;
+         description { state: "default" 0.0;
+            visible: 0;
+            color: 255 255 255 0;
+         }
+         description { state: "active" 0.0;
+            visible: 1;
+            color: 255 255 255 255;
+         }
+      }
+      part { name: "busy_shadow"; mouse_events: 0;
+		 clip_to: "busy_clip";
+		 description { state: "default" 0.0;
+			fixed: 1 1;
+            image.normal: "images/cursor_shadow.png";
+            aspect: 1.0 1.0;
+            min: 40 40;
+            max: 40 40;
+            fixed: 1 1;
+			rel1.relative: 0.0 1.0;
+            rel1.offset: 4 -5;
+            rel2.relative: 0.0 1.0;
+            rel2.offset: 4 -5;
+            align: 0.0 1.0;
+         }
+	  }
+      part { name: "busy_spinner"; mouse_events: 0;
+         clip_to: "busy_clip";
+		 description { state: "default" 0.0;
+			fixed: 1 1;
+			rel1.to: "busy_shadow";
+			rel2.to: "busy_shadow";
+			image.normal: "images/cursor_main.png";
+			map.on: 1;
+			map.smooth: 1;
+			map.rotation.center: "busy_shadow";
+		}
+		description { state: "spin" 0.0;
+			inherit: "default" 0.0;
+			map.rotation.z: 360;
+		}
+      }
+      part { name: "busy_up"; mouse_events: 0;
+		 clip_to: "busy_clip";
+		 description { state: "default" 0.0;
+			fixed: 1 1;
+			image.normal: "images/cursor_up.png";
+			rel1.to: "busy_shadow";
+			rel2.to: "busy_shadow";
+		}
+	  }
+
+      part { name: "e.swallow.content"; type: SWALLOW;
+         description { state: "default" 0.0;
+            rel1.relative: 0.2 1.0;
+            rel1.offset: 4 4;
+            rel1.to_y: "e.text.title";
+            rel2.relative: 0.8 0.0;
+            rel2.offset: -5 -11;
+            rel2.to_y: "e.text.label";
+         }
+      }
+      part { name: "base";
+         description { state: "default" 0.0;
+            image.normal: "images/button_im0.png";
+            image.border:  7 7 7 7;
+            rel1.offset: 3 4;
+            rel1.to: "e.text.label";
+            rel2.offset: -4 -5;
+            rel2.to: "e.text.label";
+            fill.smooth: 0;
+            color_class: "dialog_base";
+            }
+      }
+      part { name: "enabled_button";
+		clip_to: "disabled_button";
+		description { state: "default" 0.0;
+			min: 44 24;
+			image.normal: "images/button_im1.png";
+			image.border: 7 7 7 7;
+			fill.smooth: 0;
+			rel1 { 
+					to: "button_clip"; 
+				}
+			rel2 { 
+					to: "button_clip"; 
+				}
+		}
+		description { state: "disabled" 0.0;
+			inherit: "default";
+			color: 255 255 255 128;
+		}
+		description { state: "clicked" 0.0;
+			inherit: "default";
+		}
+      }
+      part { name: "shadow";
+		clip_to: "button_clip";
+		description { state: "default" 0.0;
+			visible: 1;
+			min: 44 24;
+			color: 255 255 255 0;
+			image.normal: "images/button_im4.png";
+			image.border: 6 6 13 6;
+			fill.smooth: 0;
+			rel1 { 
+					to: "button_clip"; 
+				}
+			rel2 { 
+					to: "button_clip";
+					offset: -1 -2;
+				}
+		}
+		description { state: "clicked" 0.0;
+			inherit: "default";
+			color: 255 255 255 200;
+		}
+		description { "disabled";
+			inherit: "default";
+			visible: 0;
+		}
+      }
+      part { name: "shadow_overlay";
+		clip_to: "button_clip";
+		description { state: "default" 0.0;
+			visible: 1;
+			min: 44 24;
+			color: 255 255 255 0;
+			image.normal: "images/button_im5.png";
+			image.border: 6 6 6 13;
+			rel1 { 
+					to: "button_clip"; 
+				}
+			rel2 { 
+					to: "button_clip"; 
+				}
+		}
+		description { state: "clicked" 0.0;
+			inherit: "default";
+			color: 255 255 255 255;
+		}
+		description { "disabled";
+				inherit: "default";
+				visible: 0;
+		}
+      }
+      rect { "button_clip"; nomouse;
+		  desc { "default";
+				color: 255 255 255 255;
+
+				rel1 { 
+					to: "base"; 
+					relative: 0.0 0.0; 
+					offset: 1 1; 
+				}
+
+				rel2 { 
+					to: "base"; 
+					relative: 1.0 1.0; 
+					offset: -2 -2; 
+				}
+			}
+
+			desc{ "disabled";
+				inherit: "default" 0.0;
+				color: 255 255 255 0;
+			}
+	  }
+	  rect { "disabled_button";
+		  clip_to: "button_clip";
+		  desc { "default";
+				/*min: 44 24;*/
+				color: 255 255 255 255;
+			}
+
+		  desc { "disabled";
+				inherit: "default" 0.0;
+				color: 150 150 150 128;
+			}
+	  }
+      
+      part { name: "block"; type: RECT;
+         description { state: "default" 0.0;
+            rel1.to: "base";
+            rel2.to: "base";
+            color: 0 0 0 0;
+            visible: 0;
+         }
+         description { state: "disabled" 0.0;
+            inherit: "default" 0.0;
+            visible: 0;
+         }
+      }
+      
+      part { name: "e.text.label"; type: TEXT; mouse_events: 0;
+         scale: 1;
+         description { state: "default" 0.0;
+            min: 96 32;
+            align: 0.5 1.0;
+            rel1.relative: 0.5  0.99;
+            rel1.offset: 4 -5;
+            rel2.relative: 0.5  0.99;
+            rel2.offset: -5 -5;
+            TEXT_COLOR;
+            text { font: FN; size: 9;
+               align: 0.5 0.5;
+               min: 0 0;
+               text_class: "button";
+            }
+            fixed: 1 1;
+         }
+         description { state: "disabled" 0.0;
+            inherit: "default" 0.0;
+            color: 128 128 128 255;
+			color3: 170 168 169 0;
+         }
+      }
+      part { name: "e.text.title"; type: TEXT; mouse_events: 0;
+         effect: SHADOW BOTTOM;
+         scale: 1;
+         description { state: "default" 0.0;
+            rel1.relative: 0.05 0.01;
+            rel1.offset: 4 4;
+            rel2.relative: 0.95 0.01;
+            rel2.offset: -5 4;
+            align: 0.5 0.0;
+            TEXT_COLOR;
+            text { font: FN; size: 9;
+               align: 0.5 0.5;
+               min: 0 0;
+               text_class: "button";
+            }
+            fixed: 0 1;
+         }
+      }
+      part { name: "blanker"; type: RECT; mouse_events: 0;
+         description { state: "default" 0.0;
+            color: 0 0 0 255;
+            visible: 1;
+         }
+         description { state: "visible" 0.0;
+            inherit: "default" 0.0;
+            color: 0 0 0 0;
+            visible: 0;
+         }
+      }
+      part { name: "event"; type: RECT;
+         ignore_flags: ON_HOLD;
+         description { state: "default" 0.0;
+            color: 0 0 0 0;
+            rel1.to: "base";
+            rel2.to: "base";
+         }
+         description { state: "disabled" 0.0;
+            inherit: "default" 0.0;
+            visible: 0;
+         }
+	 }
+   }
+programs {
+      program {
+         signal: "show"; source: "";
+         action: STATE_SET "visible" 0.0;
+         transition: DECELERATE 1.0;
+         //target: "shadow";
+         target: "blanker";
+      }
+      
+      program {
+         signal: "mouse,down,1"; source: "event";
+         script {
+            new st[31];
+            new Float:vl;
+            get_state(PART:"block", st, 30, vl);
+            if (!strcmp(st, "default"))
+              set_state(PART:"enabled_button", "clicked", 0.0);
+              set_state(PART:"shadow", "clicked", 0.0);
+              set_state(PART:"shadow_overlay", "clicked", 0.0);
+         }
+      }
+      program {
+         signal: "mouse,up,1"; source: "event";
+         script {
+            new st[31];
+            new Float:vl;
+            get_state(PART:"block", st, 30, vl);
+            if (!strcmp(st, "default"))
+              set_state(PART:"enabled_button", "default", 0.0);
+              set_state(PART:"shadow", "default", 0.0);
+              set_state(PART:"shadow_overlay", "default", 0.0);
+         }
+      }
+      program {
+         signal: "mouse,clicked,1"; source: "event";
+         script {
+            new st[31];
+            new Float:vl;
+            get_state(PART:"block", st, 30, vl);
+            if (!strcmp(st, "default"))
+              emit("e,action,next", "");
+         }
+      }
+      program {
+         signal: "e,state,next,enable"; source: "e";
+         action: STATE_SET "default" 0.0;
+         target: "block";
+         target: "e.text.label";
+         target: "event";
+      }
+      program {
+         signal: "e,state,next,disable"; source: "e";
+         action: STATE_SET "disabled" 0.0;
+         target: "block";
+         target: "e.text.label";
+         target: "event";
+      }
+      
+      program {
+         signal: "e,state,next,disable"; source: "e";
+         action: ACTION_STOP;
+         target: "spin";
+         target: "spin2";
+         target: "spin3";
+         target: "spin4";
+         after: "spin";
+      }
+      program { name: "spin";
+         action: STATE_SET "spin" 0.0;
+         transition: LINEAR 1.0;
+         target: "busy_spinner";
+         after: "spin2";
+      }
+      program { name: "spin2";
+         action: STATE_SET "default" 0.0;
+         target: "busy_spinner";
+         after: "spin";
+      }
+      program {
+         signal: "e,state,next,disable"; source: "e";
+         action: STATE_SET "active" 0.0;
+         transition: SINUSOIDAL 0.25;
+         target: "busy_clip";
+      }
+      program {
+         signal: "e,state,next,enable"; source: "e";
+         action: STATE_SET "default" 0.0;
+         transition: SINUSOIDAL 1.0;
+         target: "busy_clip";
+         after: "spin3";
+      }
+      program { name: "spin3";
+         action: ACTION_STOP;
+         target: "spin";
+         target: "spin2";
+         after: "spin4";
+      }
+      program { name: "spin4";
+         action: STATE_SET "default" 0.0;
+         target: "busy_spinner";
+      }
+   }
+}
+
+group { name: "e/wizard/firstpage";
+   images {
+       image: "images/e-256x256.png" COMP;
+   }
+   parts {
+      part { name: "base";
+         description { state: "default" 0.0;
+            max: 256 256;
+            image.normal: "images/e-256x256.png";
+            aspect: 1.0 1.0;
+            aspect_preference: BOTH;
+          }
+      }
+   }
+}
+
+group { name: "e/wizard/extra";
+   parts {
+      part { name: "clip"; type: RECT; mouse_events: 0;
+         description { state: "default" 0.0;
+         }
+      }
+      part { name: "bg"; type: RECT;
+         description { state: "default" 0.0;
+            color_class: "border_frame";
+         }
+      }
+      part { name: "shadow"; mouse_events: 0;
+         clip_to: "clip";
+         description { state: "default" 0.0;
+            rel1.relative: 0.0 0.0;
+            rel2.relative: 1.0 1.0;
+            color: 255 255 255 255;
+            image.normal: "images/screen_circular_shadow.png";
+            fill.smooth: 0;
+         }
+         description { state: "visible" 0.0;
+            inherit: "default" 0.0;
+            rel1.relative: -1.0 -1.0;
+            rel2.relative: 2.0 2.0;
+            color: 255 255 255 255;
+         }
+      }
+      part { name: "blanker"; type: RECT; mouse_events: 0;
+         description { state: "default" 0.0;
+            color: 0 0 0 255;
+            visible: 1;
+         }
+         description { state: "visible" 0.0;
+            inherit: "default" 0.0;
+            color: 0 0 0 0;
+            visible: 0;
+         }
+      }
+   }
+   programs {
+      program {
+         signal: "show"; source: "";
+         action: STATE_SET "visible" 0.0;
+         transition: DECELERATE 1.0;
+         target: "shadow";
+         target: "blanker";
+      }
+   }
+}
