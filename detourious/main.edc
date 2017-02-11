@@ -176,6 +176,7 @@ collections {
 #include "bits/start.edc"		/* start menu module */
 #include "bits/sys.edc"			/* system actions */
 #include "bits/syscon.edc"		/* system connection group */
+#include "bits/systray.edc"		/* system connection group */
 #include "bits/tclock.edc"		/* extra: tclock module */
 #include "bits/temperature.edc"	/* temperature module */
 #include "bits/textblock.edc"		/* textblock definitions group */
