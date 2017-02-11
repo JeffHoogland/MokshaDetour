@@ -48,12 +48,12 @@ group { name: "e/modules/temperature/main";
       }
       part { name: "e.text.reading"; type: TEXT;
          scale: 1;
-         effect: SHADOW BOTTOM;
+         effect: GLOW;
          clip_to: "fade_clip";
          description { state: "default" 0.0;
-            color_class: "module_label_invisible";
+            color_class: "ilist_item";
             color3: 255 255 255 255;
-            text { font: FN; size: 10;
+            text { font: FN; size: 9;
                min: 1 1;
                ellipsis: -1;
                text_class: "module_small";

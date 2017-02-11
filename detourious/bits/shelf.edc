@@ -1,6 +1,7 @@
 
 group {
 	name: "e/shelf/default/base";
+	//mouse_events: 0;
 	data {
 		item: "shaped" "0";
 		item: "hidden_state_size" "2";
@@ -11,6 +12,7 @@ group {
 		part {
 			name: "base";
 			type: IMAGE;
+			mouse_events: 0;
 			description {
 				state: "default" 0.0; //~ top
 				image {
