@@ -245,7 +245,7 @@ group { name: "e/modules/battery/main";
 			effect: TEXT_EFFECT;
 			clip_to: "text-clipper";
 			description { state: "default" 0.0;
-				TEXT_COLOR
+				//TEXT_COLOR
 				text {
 					font: FONT;
 					size: 8;
@@ -269,7 +269,7 @@ group { name: "e/modules/battery/main";
 			effect: TEXT_EFFECT;
 			clip_to: "text-clipper";
 			description { state: "default" 0.0;
-				TEXT_COLOR
+				//TEXT_COLOR
 				text {
 					font: FONT;
 					size: 8;
