@@ -8,7 +8,7 @@ group {
          mouse_events: 0;
          description {
             state: "default" 0.0;
-            min: 22 24;
+            //min: 22 24;
             max: 9999 24;
             image {
                normal: "images/entry_im0.png";
