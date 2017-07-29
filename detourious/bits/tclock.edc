@@ -51,7 +51,7 @@ group {
 					offset: 0 0; 
 				}
 				TEXT_COLOR;
-				TEXT_NORMAL("module_large", 0.5 0.5, 1 1);
+				TEXT_NORMAL("module_large", 0.5 0.7, 0 0);
 				color_class: "module_label";
 				text.ellipsis: -1;
 			}
