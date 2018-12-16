@@ -1,15 +1,11 @@
-
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=FineryBlues
-Comment=Improved FineryDark theme
+Name=oomox-MokshaDetour
+Comment=A partially sexual act; when a female (of any species; mostly humanoids) rubs the ears/lobes of a male Ferengi, creating sensual emotions and chemical reactions in the male (and sometimes in the female).
 Encoding=UTF-8
 
-Name[en_US]=FineryBlues
-
 [X-GNOME-Metatheme]
-GtkTheme=FineryBlues
-MetacityTheme=FineryBlues
-IconTheme=Humanities-Blue
-CursorTheme=DMZ-White
-ButtonLayout=close,minimize,maximize:
+Name=oomox-MokshaDetour
+GtkTheme=oomox-MokshaDetour
+IconTheme=oomox-MokshaDetour
+MetacityTheme=oomox-MokshaDetour
