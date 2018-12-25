@@ -126,33 +126,33 @@ group { name: "elm/toolbar/item/default";
             }
          } else if (m1 == (ICON)) {
             if (!d) {
-               set_state(PART:"elm.swallow.icon", "icononly", 0.0);
+               //set_state(PART:"elm.swallow.icon", "icononly", 0.0);
                set_state(PART:"elm.icon.clipper", "default", 0.0);
-               set_state(PART:"elm.text", "icononly", 0.0);
+               //set_state(PART:"elm.text", "icononly", 0.0);
             } else {
-               set_state(PART:"elm.swallow.icon", "icononly", 0.0);
+               //set_state(PART:"elm.swallow.icon", "icononly", 0.0);
                set_state(PART:"elm.icon.clipper", "disabled", 0.0);
-               set_state(PART:"elm.text", "icononly", 0.0);
+               //set_state(PART:"elm.text", "icononly", 0.0);
             }
          } else if (m1 == (LABEL)) {
             if (!d) {
-               set_state(PART:"elm.swallow.icon", "noicon", 0.0);
+               //set_state(PART:"elm.swallow.icon", "noicon", 0.0);
                set_state(PART:"elm.icon.clipper", "default", 0.0);
-               set_state(PART:"elm.text", "noicon", 0.0);
+               //set_state(PART:"elm.text", "noicon", 0.0);
             } else {
-               set_state(PART:"elm.swallow.icon", "noicon", 0.0);
+               //set_state(PART:"elm.swallow.icon", "noicon", 0.0);
                set_state(PART:"elm.icon.clipper", "disabled", 0.0);
-               set_state(PART:"elm.text", "noicon_disabled", 0.0);
+               //set_state(PART:"elm.text", "noicon_disabled", 0.0);
             }
          } else {
 			if (!d) {
-				set_state(PART:"elm.swallow.icon", "noicon", 0.0);
+				//set_state(PART:"elm.swallow.icon", "noicon", 0.0);
 				set_state(PART:"elm.icon.clipper", "default", 0.0);
-				set_state(PART:"elm.text", "noicon", 0.0);
+				//set_state(PART:"elm.text", "noicon", 0.0);
 			} else {
-				set_state(PART:"elm.swallow.icon", "noicon", 0.0);
+				//set_state(PART:"elm.swallow.icon", "noicon", 0.0);
 				set_state(PART:"elm.icon.clipper", "disabled", 0.0);
-				set_state(PART:"elm.text", "noicon_disabled", 0.0);
+				//set_state(PART:"elm.text", "noicon_disabled", 0.0);
 			}
          }
       }

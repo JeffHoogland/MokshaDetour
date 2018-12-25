@@ -75,7 +75,7 @@ group { name: "elm/button/base/default";
             if (!d) {
                set_state(PART:"elm.swallow.content", "default", 0.0);
                set_state(PART:"sizer.content", "default", 0.0);
-               set_state(PART:"elm.text", "icononly", 0.0);
+               //set_state(PART:"elm.text", "icononly", 0.0);
                set_state(PART:"icon_clip", "default", 0.0);
                set_state(PART:"event", "default", 0.0);
                set_state(PART:"enabled_button", "default", 0.0);
@@ -85,7 +85,7 @@ group { name: "elm/button/base/default";
             } else {
                set_state(PART:"elm.swallow.content", "default", 0.0);
                set_state(PART:"sizer.content", "default", 0.0);
-               set_state(PART:"elm.text", "icononly", 0.0);
+               //set_state(PART:"elm.text", "icononly", 0.0);
                set_state(PART:"icon_clip", "disabled", 0.0);
                set_state(PART:"event", "disabled", 0.0);
                set_state(PART:"enabled_button", "disabled", 0.0);
