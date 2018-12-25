@@ -780,6 +780,9 @@ group { name: "elm/spinner/base/vertical";
 				color: 0 0 0 128;
 				color3: 0 0 0 0;
 			}
+			description { state: "visible" 0.0;
+				inherit: "default" 0.0;
+			}
 		}
 		part { name: "elm.dragable.slider";
 			type: RECT;
