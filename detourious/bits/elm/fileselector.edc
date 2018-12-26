@@ -127,6 +127,61 @@ group { name: "elm/fileselector/base/default";
             }
          }
       }
+      swallow { "elm.swallow.filters";
+         desc { "default";
+            align: 1.0 1.0;
+            fixed: 1 1;
+            rel1 {
+               to_y: "elm.swallow.ok";
+               relative: 1.0 0.0;
+               offset: -4 -4;
+            }
+            rel2 {
+               to_y: "elm.swallow.ok";
+               relative: 1.0 0.0;
+               offset: -4 -4;
+            }
+         }
+      }
+      
+      swallow { "elm.swallow.spinner";
+         clip: "elm.spinner.clip";
+         desc { "default";
+            fixed: 1 1;
+            align: 1.0 0.0;
+            rel1.relative: 1.0 0.0;
+            rel1.offset: -4 3;
+            rel2.relative: 1.0 0.0;
+            rel2.offset: -4 3;
+         }
+      }
+      rect { "elm.spinner.clip";
+         desc { "default";
+            fixed: 1 1;
+            rel1.to: "elm.swallow.spinner";
+            rel2.to: "elm.swallow.spinner";
+            color: 255 255 255 0;
+         }
+         desc { "visible";
+            inherit: "default" 0.0;
+            color: 255 255 255 255;
+         }
+      }
+      swallow { "elm.swallow.search";
+         desc { "default";
+            min: 65 0;
+            rel1 {
+               to: "elm.swallow.home";
+               relative: 1.0 0.0;
+               offset: 3 0;
+            }
+            rel2 {
+               to_y: "elm.swallow.home";
+               relative: 1.0 1.0;
+               offset: -4 -1;
+            }
+         }
+      }
    }
 }
 
