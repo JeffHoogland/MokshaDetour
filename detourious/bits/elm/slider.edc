@@ -37,7 +37,7 @@ group { name: "elm/slider/horizontal/default";
    alias: "elm/slider/horizontal/media_player/position/flush";
    alias: "elm/slider/horizontal/media_player/volume/default";
    alias: "elm/slider/horizontal/media_player/volume/flush";
-   
+
 #define ICON    1
 #define LABEL   2
 #define END     4
@@ -123,7 +123,7 @@ group { name: "elm/slider/horizontal/default";
          scale: 1;
          description { state: "default" 0.0;
             min: 68 24;
-			max: 99999 24;
+         max: 99999 24;
             align: 1.0 0.5;
             rel1.to_x: "elm.text";
             rel1.relative: 1.0 0.0;
@@ -138,25 +138,28 @@ group { name: "elm/slider/horizontal/default";
             rel1.to: "elm.swallow.bar";
             rel2.to: "elm.swallow.bar";
             image {
-					normal: "images/runner_im0.png";
-					border: 6 6 0 0;
-			}
+               normal: "images/runner_im0.png";
+               border: 6 6 0 0;
+         }
             fill.smooth: 0;
             min: 0 16;
             max: 99999 16;
-	        fixed: 0 1;
+           fixed: 0 1;
+         }
+         description { state: "disabled" 0.0;
+            inherit: "default" 0.0;
          }
       }
       part { name: "base_active"; mouse_events: 0;
-		description { state: "default" 0.0;
+      description { state: "default" 0.0;
             rel1.to: "base";
             rel2.to_x: "button";
             rel2.to_y: "base";
             rel2.relative: 0.5 1.0;
             image {
-					normal: "images/runner_im2.png";
-					border: 6 6 0 0;
-			}
+               normal: "images/runner_im2.png";
+               border: 6 6 0 0;
+         }
             fill.smooth: 0;
             min: 0 15;
             max: 99999 15;
@@ -164,16 +167,16 @@ group { name: "elm/slider/horizontal/default";
             fixed: 0 1;
          }
         description { state: "disabled" 0.0;
-			inherit: "default" 0.0;
-			color_class: "none";
-			color: COLOR_SELECTED_FADE;
+         inherit: "default" 0.0;
+         color_class: "none";
+         color: COLOR_SELECTED_FADE;
         }
         description { state: "inverted" 0.0;
             rel1.relative: 0.5 0.0;
             image {
-					normal: "images/runner_im2.png";
-					border: 6 6 0 0;
-			}
+               normal: "images/runner_im2.png";
+               border: 6 6 0 0;
+         }
             fill.smooth: 0;
             min: 0 15;
             max: 99999 15;
@@ -190,7 +193,7 @@ group { name: "elm/slider/horizontal/default";
             color: COLOR_SELECTED_FADE;
          }
       }
-      
+
        part { name: "dis_clip"; type: RECT;
          description { state: "default" 0.0;
             rel1.to: "elm.swallow.icon";
@@ -249,21 +252,21 @@ group { name: "elm/slider/horizontal/default";
             align: 0.0 0.5;
             rel1.to_x: "elm.swallow.icon";
             rel1.relative: 1.0 0.0;
-			rel1.offset: -1 4;
+         rel1.offset: -1 4;
             rel2.to_x: "elm.swallow.icon";
             rel2.relative: 1.0 1.0;
-			rel2.offset: -1 -5;
+         rel2.offset: -1 -5;
             TEXT_COLOR;
-			TEXT_NORMAL("", 0.0 0.5, 0 0);
-			text.ellipsis: -1;
+         TEXT_NORMAL("", 0.0 0.5, 0 0);
+         text.ellipsis: -1;
          }
          description { state: "visible" 0.0;
             inherit: "default" 0.0;
-			visible: 1;
-			fixed: 1 0;
-			text.min: 1 1;
-			rel1.offset: 0 4;
-			rel2.offset: 0 -5;
+         visible: 1;
+         fixed: 1 0;
+         text.min: 1 1;
+         rel1.offset: 0 4;
+         rel2.offset: 0 -5;
          }
          description { state: "disabled_visible" 0.0;
             inherit: "visible" 0.0;
@@ -331,30 +334,38 @@ group { name: "elm/slider/horizontal/default";
             rel1.offset: -5 0;
             rel2.offset: -5 -1;
          }
+         description { state: "disabled_visible" 0.0;
+            inherit: "visible" 0.0;
+            color: 255 128 128 128;
+         }
       }
       part { name: "units";
-			mouse_events: 0;
-			description { state: "default" 0.0;
-				visible: 0;
-				rel1 {
-					to_x: "elm.units";
-					offset: -5 0;
-				}
-				rel2 {
-					to_x: "elm.units";
-					offset: 5 -1;
-				}
-				image {
-					normal: "images/entry_im0.png";
-					border: 6 6 8 7;
-				}
-				fill.smooth: 0;
-			}
-			description { state: "visible" 0.0;
-				inherit: "default" 0.0;
-				visible: 1;
-			}
-	  }
+         mouse_events: 0;
+         description { state: "default" 0.0;
+            visible: 0;
+            rel1 {
+               to_x: "elm.units";
+               offset: -5 0;
+            }
+            rel2 {
+               to_x: "elm.units";
+               offset: 5 -1;
+            }
+            image {
+               normal: "images/entry_im0.png";
+               border: 6 6 8 7;
+            }
+            fill.smooth: 0;
+         }
+         description { state: "visible" 0.0;
+            inherit: "default" 0.0;
+            visible: 1;
+         }
+         description { state: "disabled_visible" 0.0;
+            inherit: "visible" 0.0;
+            color: 255 128 128 128;
+         }
+     }
       part { name: "elm.units"; type: TEXT; mouse_events: 0;
          scale: 1;
          description { state: "default" 0.0;
@@ -363,7 +374,7 @@ group { name: "elm/slider/horizontal/default";
             rel1.to_x: "limits";
             rel2.to_x: "limits";
             TEXT_COLOR;
-			TEXT_NORMAL("", 0.0 0.5, 0 0);
+         TEXT_NORMAL("", 0.0 0.5, 0 0);
          }
          description { state: "visible" 0.0;
             inherit: "default" 0.0;
@@ -403,30 +414,30 @@ group { name: "elm/slider/horizontal/default";
          }
       }
       part {
-			name: "slider_image_shadow";
-			mouse_events: 0;
-			description {
-				state: "default" 0.0;
-				rel1 { 
-					to: "slider"; 
-					offset: 1 -1; 
-				}
-				rel2 { 
-					to: "slider"; 
-					offset: -2 -1; 
-				}
-				image {
-					normal: "images/slider_im1.png";
-					border: 7 8 7 7;
-				}
-			}
-		}
+         name: "slider_image_shadow";
+         mouse_events: 0;
+         description {
+            state: "default" 0.0;
+            rel1 {
+               to: "slider";
+               offset: 1 -1;
+            }
+            rel2 {
+               to: "slider";
+               offset: -2 -1;
+            }
+            image {
+               normal: "images/slider_im1.png";
+               border: 7 8 7 7;
+            }
+         }
+      }
       part { name: "slider";
          description { state: "default" 0.0;
             image.normal: "images/slider_im0.png";
             //FIXED_SIZE(14, 18)
             min: 29 17;
-			max: 29 17;
+         max: 29 17;
             fixed: 1 1;
             step: 2 2;
             rel1.to: "elm.dragable.slider";
@@ -438,8 +449,8 @@ group { name: "elm/slider/horizontal/default";
             inherit: "default" 0.0;
          }
          description { state: "over" 0.0;
-			inherit: "default" 0.0;
-		 }
+         inherit: "default" 0.0;
+       }
          description { state: "clicked" 0.0;
             inherit: "default" 0.0;
             color: 235 235 235 255;
@@ -475,21 +486,21 @@ group { name: "elm/slider/horizontal/default";
       }
    }
    programs {
-	   
-	  program {	name: "over_slider";
-			signal: "mouse,in";
-			source: "slideevent";
-			action: STATE_SET "over" 0.0;
-			transition: LINEAR 0.0;
-			target: "slider";
-	  }
-	  program {	name: "over_slider_out";
-			signal: "mouse,out";
-			source: "slideevent";
-			action: STATE_SET "default" 0.0;
-			transition: LINEAR 0.0;
-			target: "slider";
-	  }
+
+     program { name: "over_slider";
+         signal: "mouse,in";
+         source: "slideevent";
+         action: STATE_SET "over" 0.0;
+         transition: LINEAR 0.0;
+         target: "slider";
+     }
+     program { name: "over_slider_out";
+         signal: "mouse,out";
+         source: "slideevent";
+         action: STATE_SET "default" 0.0;
+         transition: LINEAR 0.0;
+         target: "slider";
+     }
 
 
       program {
@@ -540,7 +551,7 @@ group { name: "elm/slider/horizontal/default";
       }
       program {
          signal: "elm,state,text,hidden"; source: "elm";
-         script {         
+         script {
             new m = get_int(slmode);
             m &= ~LABEL; set_int(slmode, m);
             eval_mode(m);
@@ -556,7 +567,7 @@ group { name: "elm/slider/horizontal/default";
       }
       program {
          signal: "elm,state,icon,hidden"; source: "elm";
-         script {         
+         script {
             new m = get_int(slmode);
             m &= ~ICON; set_int(slmode, m);
             eval_mode(m);
@@ -572,7 +583,7 @@ group { name: "elm/slider/horizontal/default";
       }
       program { name: "end_hide";
          signal: "elm,state,end,hidden"; source: "elm";
-         script {         
+         script {
             new m = get_int(slmode);
             m &= ~END; set_int(slmode, m);
             eval_mode(m);
@@ -593,7 +604,7 @@ group { name: "elm/slider/horizontal/default";
       program {
          signal: "elm,state,units,hidden"; source: "elm";
          action:  STATE_SET "default" 0.0;
-         script {         
+         script {
             new m = get_int(slmode);
             m &= ~UNITS; set_int(slmode, m);
             eval_mode(m);
@@ -613,7 +624,7 @@ group { name: "elm/slider/horizontal/default";
       }
       program {
          signal: "elm,state,inverted,off"; source: "elm";
-         script {         
+         script {
             new m = get_int(slmode);
             m &= ~INVERT; set_int(slmode, m);
             eval_mode(m);
@@ -633,7 +644,7 @@ group { name: "elm/slider/horizontal/default";
       }
       program {
          signal: "elm,state,enabled"; source: "elm";
-         script {         
+         script {
             new m = get_int(slmode);
             m &= ~DISABLE; set_int(slmode, m);
             eval_mode(m);
@@ -760,27 +771,27 @@ group { name: "elm/slider/vertical/default";
             rel1.to: "elm.swallow.bar";
             rel2.to: "elm.swallow.bar";
             image {
-					normal: "images/runner_im1.png";
-					border: 0 0 6 6;
-			}
+               normal: "images/runner_im1.png";
+               border: 0 0 6 6;
+         }
             fill.smooth: 0;
             min: 16 0;
             max: 16 99999;
-			fixed: 1 0;
+         fixed: 1 0;
          }
       }
       part { name: "base_active"; mouse_events: 0;
          description { state: "default" 0.0;
-			image {
-					normal: "images/runner_im3.png";
-					border: 0 0 6 6;
-				}
+         image {
+               normal: "images/runner_im3.png";
+               border: 0 0 6 6;
+            }
             fill.smooth: 0;
             min: 15 0;
             max: 15 99999;
             //color_class: "focus";
             color: COLOR_SELECTED;
-            fixed: 1 0;			 
+            fixed: 1 0;
             rel1.to: "base";
             rel1.offset: 0 0;
             rel2.relative: 1.0 0.5;
@@ -791,8 +802,8 @@ group { name: "elm/slider/vertical/default";
          description { state: "disabled" 0.0;
             inherit: "default" 0.0;
             color_class: "none";
-			//color: 0 0 0 60;
-			color: COLOR_SELECTED_FADE;
+         //color: 0 0 0 60;
+         color: COLOR_SELECTED_FADE;
          }
          description { state: "inverted" 0.0;
             rel1.relative: 0.0 0.5;
@@ -802,14 +813,14 @@ group { name: "elm/slider/vertical/default";
             rel2.to: "base";
             rel2.offset: -2 -1;
             image {
-					normal: "images/runner_im3.png";
-					border: 0 0 6 6;
-				}
+               normal: "images/runner_im3.png";
+               border: 0 0 6 6;
+            }
             fill.smooth: 0;
             min: 15 0;
             max: 15 99999;
             color: COLOR_SELECTED;
-            fixed: 1 0;		
+            fixed: 1 0;
          }
          description { state: "disabled_inverted" 0.0;
             inherit: "inverted" 0.0;
@@ -879,8 +890,8 @@ group { name: "elm/slider/vertical/default";
             rel2.relative: 1.0 1.0;
             rel2.offset: -3 -1;
             TEXT_COLOR;
-			TEXT_NORMAL("", 0.0 0.5, 0 0);
-			text.ellipsis: -1;
+         TEXT_NORMAL("", 0.0 0.5, 0 0);
+         text.ellipsis: -1;
             visible: 0;
          }
          description { state: "visible" 0.0;
@@ -956,30 +967,38 @@ group { name: "elm/slider/vertical/default";
             rel1.offset: 0 -5;
             rel2.offset: -1 -5;
          }
+         description { state: "disabled_visible" 0.0;
+            inherit: "visible" 0.0;
+            color: 255 128 128 128;
+         }
       }
       part { name: "units";
-			mouse_events: 0;
-			description { state: "default" 0.0;
-				visible: 0;
-				rel1 {
-					to: "elm.units";
-					offset: -8 -5;
-				}
-				rel2 {
-					to: "elm.units";
-					offset: 7 4;
-				}
-				image {
-					normal: "images/entry_im0.png";
-					border: 6 6 8 7;
-				}
-				fill.smooth: 0;
-			}
-			description { state: "visible" 0.0;
-				inherit: "default" 0.0;
-				visible: 1;
-			}
-	  }
+         mouse_events: 0;
+         description { state: "default" 0.0;
+            visible: 0;
+            rel1 {
+               to: "elm.units";
+               offset: -8 -5;
+            }
+            rel2 {
+               to: "elm.units";
+               offset: 7 4;
+            }
+            image {
+               normal: "images/entry_im0.png";
+               border: 6 6 8 7;
+            }
+            fill.smooth: 0;
+         }
+         description { state: "visible" 0.0;
+            inherit: "default" 0.0;
+            visible: 1;
+         }
+         description { state: "disabled_visible" 0.0;
+            inherit: "visible" 0.0;
+            color: 255 128 128 128;
+         }
+     }
       part { name: "elm.units"; type: TEXT; mouse_events: 0;
          scale: 1;
          description { state: "default" 0.0;
@@ -988,7 +1007,7 @@ group { name: "elm/slider/vertical/default";
             rel1.to_y: "limits";
             rel2.to_y: "limits";
             TEXT_COLOR;
-			TEXT_NORMAL("", 0.0 0.5, 0 0);
+         TEXT_NORMAL("", 0.0 0.5, 0 0);
          }
          description { state: "visible" 0.0;
             inherit: "default" 0.0;
@@ -1030,24 +1049,24 @@ group { name: "elm/slider/vertical/default";
          }
       }
       part {
-			name: "slider_image_shadow";
-			mouse_events: 0;
-			description {
-				state: "default" 0.0;
-				rel1 { 
-					to: "slider"; 
-					offset: 0 1; 
-				}
-				rel2 { 
-					to: "slider"; 
-					offset: -1 0; 
-				}
-				image {
-					normal: "images/slider_im3.png";
-					border: 7 7 7 7;
-				}
-			}
-	  }
+         name: "slider_image_shadow";
+         mouse_events: 0;
+         description {
+            state: "default" 0.0;
+            rel1 {
+               to: "slider";
+               offset: 0 1;
+            }
+            rel2 {
+               to: "slider";
+               offset: -1 0;
+            }
+            image {
+               normal: "images/slider_im3.png";
+               border: 7 7 7 7;
+            }
+         }
+     }
       part { name: "slider";
          description { state: "default" 0.0;
             rel1.to: "elm.dragable.slider";
@@ -1056,16 +1075,16 @@ group { name: "elm/slider/vertical/default";
             rel2.offset: 0 0;
             image.normal: "images/slider_im2.png";
             min: 17 29;
-			max: 17 29;
-			fixed: 1 1;
+         max: 17 29;
+         fixed: 1 1;
             step: 2 2;
          }
          description { state: "disabled" 0.0;
             inherit: "default" 0.0;
          }
          description { state: "over" 0.0;
-			inherit: "default" 0.0;
-		 }
+         inherit: "default" 0.0;
+       }
          description { state: "clicked" 0.0;
             inherit: "default" 0.0;
             color: 235 235 235 255;
@@ -1100,21 +1119,21 @@ group { name: "elm/slider/vertical/default";
          }
       }
    }
-   programs { 
-	  program {	name: "over_slider";
-			signal: "mouse,in";
-			source: "slideevent";
-			action: STATE_SET "over" 0.0;
-			transition: LINEAR 0.0;
-			target: "slider";
-	  }
-	  program {	name: "over_slider_out";
-			signal: "mouse,out";
-			source: "slideevent";
-			action: STATE_SET "default" 0.0;
-			transition: LINEAR 0.0;
-			target: "slider";
-	  }
+   programs {
+     program { name: "over_slider";
+         signal: "mouse,in";
+         source: "slideevent";
+         action: STATE_SET "over" 0.0;
+         transition: LINEAR 0.0;
+         target: "slider";
+     }
+     program { name: "over_slider_out";
+         signal: "mouse,out";
+         source: "slideevent";
+         action: STATE_SET "default" 0.0;
+         transition: LINEAR 0.0;
+         target: "slider";
+     }
 
       program {
          signal: "mouse,down,1"; source: "elm.dragable.slider";
@@ -1164,7 +1183,7 @@ group { name: "elm/slider/vertical/default";
       }
       program {
          signal: "elm,state,text,hidden"; source: "elm";
-         script {         
+         script {
             new m = get_int(slmode);
             m &= ~LABEL; set_int(slmode, m);
             eval_mode(m);
@@ -1180,7 +1199,7 @@ group { name: "elm/slider/vertical/default";
       }
       program {
          signal: "elm,state,icon,hidden"; source: "elm";
-         script {         
+         script {
             new m = get_int(slmode);
             m &= ~ICON; set_int(slmode, m);
             eval_mode(m);
@@ -1196,7 +1215,7 @@ group { name: "elm/slider/vertical/default";
       }
       program { name: "end_hide";
          signal: "elm,state,end,hidden"; source: "elm";
-         script {         
+         script {
             new m = get_int(slmode);
             m &= ~END; set_int(slmode, m);
             eval_mode(m);
@@ -1217,7 +1236,7 @@ group { name: "elm/slider/vertical/default";
       program {
          signal: "elm,state,units,hidden"; source: "elm";
          action:  STATE_SET "default" 0.0;
-         script {         
+         script {
             new m = get_int(slmode);
             m &= ~UNITS; set_int(slmode, m);
             eval_mode(m);
@@ -1237,7 +1256,7 @@ group { name: "elm/slider/vertical/default";
       }
       program {
          signal: "elm,state,inverted,off"; source: "elm";
-         script {         
+         script {
             new m = get_int(slmode);
             m &= ~INVERT; set_int(slmode, m);
             eval_mode(m);
@@ -1257,7 +1276,7 @@ group { name: "elm/slider/vertical/default";
       }
       program {
          signal: "elm,state,enabled"; source: "elm";
-         script {         
+         script {
             new m = get_int(slmode);
             m &= ~DISABLE; set_int(slmode, m);
             eval_mode(m);
@@ -1282,16 +1301,19 @@ group { name: "elm/slider/horizontal/indicator/default";
    alias: "elm/slider/horizontal/indicator/disabled";
    alias: "elm/slider/horizontal/popup/default";
    alias: "elm/slider/horizontal/indicator/media_player/position/default";
-   alias: "elm/slider/horizontal/indicator/media_player/position/flush"; 
+   alias: "elm/slider/horizontal/indicator/media_player/position/flush";
    alias: "elm/slider/horizontal/indicator/media_player/volume/default";
-   alias: "elm/slider/horizontal/indicator/media_player/volume/flush"; 
-   
+   alias: "elm/slider/horizontal/indicator/media_player/volume/flush";
+
    parts {
       part { name: "base"; type: SPACER;
          scale: 1;
          description { state: "default" 0.0;
             fixed: 1 1;
             min: 16 16;
+         }
+         description { state: "disabled" 0.0;
+            inherit: "default" 0.0;
          }
       }
       part { name: "clip"; type: RECT;
@@ -1316,10 +1338,10 @@ group { name: "elm/slider/horizontal/indicator/default";
             rel2.offset: 9 3;
             rel2.to: "elm.indicator";
             image {
-				normal: "images/ibar_im0.png";
-				border: 5 5 5 5;
-			}
-			color: 255 255 255 129;
+            normal: "images/ibar_im0.png";
+            border: 5 5 5 5;
+         }
+         color: 255 255 255 129;
             fill.smooth: 0;
             visible: 0;
          }
@@ -1425,6 +1447,9 @@ group { name: "elm/slider/vertical/indicator/default";
             fixed: 1 1;
             min: 16 16;
          }
+         description { state: "disabled" 0.0;
+            inherit: "default" 0.0;
+         }
       }
       part { name: "clip"; type: RECT;
          description { state: "default" 0.0;
@@ -1448,9 +1473,9 @@ group { name: "elm/slider/vertical/indicator/default";
             rel2.offset: 9 3;
             rel2.to: "elm.indicator";
              image {
-				normal: "images/ibar_im0.png";
-				border: 5 5 5 5;
-			}
+            normal: "images/ibar_im0.png";
+            border: 5 5 5 5;
+         }
             color: 255 255 255 129;
             fill.smooth: 0;
             visible: 0;

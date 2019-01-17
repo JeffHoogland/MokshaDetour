@@ -18,10 +18,10 @@
 #define FONT "Sans"
 #define FONT_BOLD "Sans:style=bold"
 #define FONT_ITALIC "Sans:style=italic"
-#define TEXT_SIZE 10
+#define TEXT_SIZE 11
 #define TEXT_SIZE_BOLD 9
-#define TEXT_SIZE_LARGE 10
-#define TEXT_SIZE_SMALL 9
+#define TEXT_SIZE_LARGE 12
+#define TEXT_SIZE_SMALL 10
 #define TEXT_COLOR								\
     color_class: "label_text";					\
     color3: 255 255 255 255;
