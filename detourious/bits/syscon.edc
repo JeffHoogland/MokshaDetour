@@ -454,6 +454,25 @@ group {
 				visible: 0;
 			}
 		}
+		part { name: "glow"; mouse_events: 0;
+            description { state: "default" 0.0;
+				image.normal: "images/button_im3.png";
+				image.border: 9 9 9 9;
+				image.middle: 0;
+				rel1.to: "button_base";
+				rel1.offset: -2 -2;
+				rel2.to: "button_base";
+				rel2.offset:  1 0;
+				fill.smooth: 0;
+				color: 255 255 255 0;
+				visible: 0;
+            }
+			description { state: "focused" 0.0;
+            inherit: "default" 0.0;
+				color: 255 255 255 255;
+				visible: 1;
+         }
+      }
 
 		part {
 			name: "e.swallow.icon";
@@ -549,6 +568,14 @@ group {
 			target: "shadow_overlay";
 			target: "disabler";
 		}
+		program { signal: "e,state,focused"; source: "e";
+		action: STATE_SET "focused" 0.0;
+		target: "glow";
+	}
+	  program { signal: "e,state,unfocused"; source: "e";
+		action: STATE_SET "default" 0.0;
+		target: "glow";
+	}
 	}
 }
 
@@ -601,5 +628,6 @@ group { name: "e/modules/syscon/button";
          signal: "mouse,clicked,1*"; source: "base";
          action: SIGNAL_EMIT "e,action,shutdown,show" "";
       }
+
    }
 }

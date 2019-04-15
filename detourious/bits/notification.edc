@@ -84,10 +84,10 @@ group {
             clip_to: "clipper_base";
             description {
 				state: "default" 0.0;
-				color: 255 255 255 200;
+				//~ color: 255 255 255 200;
 				image {
-					normal: "images/ibar_im0.png";
-					border: 5 5 5 5;
+					normal: "images/window-border_bt5.png";
+					border: 15 15 15 15;
 				}
             }
 		}
@@ -203,8 +203,8 @@ group {
             description {
 				state: "default" 0.0;
 				align: 0.0 0.0;
-				min: 180 0;
-				max: 180 150;
+				max: 300 99999;
+                min: 200 40;    /* **** */
 				rel1 {
 					to_x: "notification.swallow.app_icon";
 					to_y: "notification.text.title";

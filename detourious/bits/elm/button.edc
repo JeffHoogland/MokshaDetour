@@ -5,92 +5,77 @@ group { name: "elm/button/base/default";
 #define LABEL    2
 #define MASK     3
 #define DISABLE  4
+#define PRESSED  8
    script {
       public btmode;
       public eval_mode(m) {
          new m1 = m & MASK;
          new d = m & DISABLE;
-         if (m1 == (ICON | LABEL)) {
+         new p = m & PRESSED;
+          if (m1 == (ICON | LABEL)) {
             if (!d) {
                set_state(PART:"elm.swallow.content", "visible", 0.0);
                set_state(PART:"sizer.content", "visible", 0.0);
-               set_state(PART:"elm.text", "visible", 0.0);
-               set_state(PART:"icon_clip", "default", 0.0);
                set_state(PART:"event", "default", 0.0);
-               set_state(PART:"enabled_button", "default", 0.0);
-               set_state(PART:"shadow", "default", 0.0);
-               set_state(PART:"shadow_overlay", "default", 0.0);
+               if (!p) {
+                  set_state(PART:"elm.text", "visible", 0.0);
+                  set_state(PART:"icon_clip", "default", 0.0);
+               } else {
+                  set_state(PART:"elm.text", "pressed_visible", 0.0);
+                  set_state(PART:"icon_clip", "pressed", 0.0);
+               }
             } else {
                set_state(PART:"elm.swallow.content", "visible", 0.0);
                set_state(PART:"sizer.content", "visible", 0.0);
                set_state(PART:"elm.text", "disabled_visible", 0.0);
                set_state(PART:"icon_clip", "disabled", 0.0);
                set_state(PART:"event", "disabled", 0.0);
-               set_state(PART:"enabled_button", "disabled", 0.0);
-               set_state(PART:"shadow", "disabled", 0.0);
-               set_state(PART:"shadow_overlay", "disabled", 0.0);
-
             }
          } else if (m1 == (ICON)) {
             if (!d) {
                set_state(PART:"elm.swallow.content", "icononly", 0.0);
                set_state(PART:"sizer.content", "icononly", 0.0);
-               set_state(PART:"elm.text", "default", 0.0);
-               set_state(PART:"icon_clip", "default", 0.0);
                set_state(PART:"event", "default", 0.0);
-               set_state(PART:"enabled_button", "default", 0.0);
-               set_state(PART:"shadow", "default", 0.0);
-               set_state(PART:"shadow_overlay", "default", 0.0);
+               set_state(PART:"elm.text", "default", 0.0);
+               if (!p)
+                  set_state(PART:"icon_clip", "default", 0.0);
+               else
+                  set_state(PART:"icon_clip", "pressed", 0.0);
             } else {
                set_state(PART:"elm.swallow.content", "icononly", 0.0);
                set_state(PART:"sizer.content", "icononly", 0.0);
                set_state(PART:"elm.text", "default", 0.0);
                set_state(PART:"icon_clip", "disabled", 0.0);
                set_state(PART:"event", "disabled", 0.0);
-               set_state(PART:"enabled_button", "disabled", 0.0);
-               set_state(PART:"shadow", "disabled", 0.0);
-               set_state(PART:"shadow_overlay", "disabled", 0.0);
             }
          } else if (m1 == (LABEL)) {
             if (!d) {
                set_state(PART:"elm.swallow.content", "default", 0.0);
                set_state(PART:"sizer.content", "default", 0.0);
-               set_state(PART:"elm.text", "textonly", 0.0);
                set_state(PART:"icon_clip", "default", 0.0);
                set_state(PART:"event", "default", 0.0);
-               set_state(PART:"enabled_button", "default", 0.0);
-               set_state(PART:"shadow", "default", 0.0);
-               set_state(PART:"shadow_overlay", "default", 0.0);
+               if (!p)
+                  set_state(PART:"elm.text", "textonly", 0.0);
+               else
+                  set_state(PART:"elm.text", "pressed_textonly", 0.0);
             } else {
                set_state(PART:"elm.swallow.content", "default", 0.0);
                set_state(PART:"sizer.content", "default", 0.0);
                set_state(PART:"elm.text", "disabled_textonly", 0.0);
                set_state(PART:"icon_clip", "disabled", 0.0);
                set_state(PART:"event", "disabled", 0.0);
-               set_state(PART:"enabled_button", "disabled", 0.0);
-               set_state(PART:"shadow", "disabled", 0.0);
-               set_state(PART:"shadow_overlay", "disabled", 0.0);
             }
          } else {
             if (!d) {
                set_state(PART:"elm.swallow.content", "default", 0.0);
                set_state(PART:"sizer.content", "default", 0.0);
-               //set_state(PART:"elm.text", "icononly", 0.0);
                set_state(PART:"icon_clip", "default", 0.0);
                set_state(PART:"event", "default", 0.0);
-               set_state(PART:"enabled_button", "default", 0.0);
-               set_state(PART:"enabled_button", "disabled", 0.0);
-               set_state(PART:"shadow", "default", 0.0);
-               set_state(PART:"shadow_overlay", "default", 0.0);
             } else {
                set_state(PART:"elm.swallow.content", "default", 0.0);
                set_state(PART:"sizer.content", "default", 0.0);
-               //set_state(PART:"elm.text", "icononly", 0.0);
                set_state(PART:"icon_clip", "disabled", 0.0);
                set_state(PART:"event", "disabled", 0.0);
-               set_state(PART:"enabled_button", "disabled", 0.0);
-               set_state(PART:"shadow", "disabled", 0.0);
-               set_state(PART:"shadow_overlay", "disabled", 0.0);
             }
          }
       }
