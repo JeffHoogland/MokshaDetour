@@ -363,6 +363,7 @@ group {
 
 		part {
 			name: "base";
+			mouse_events: 0;
 			type: IMAGE;
 			description {
 				state: "default" 0.0; //~ top
@@ -545,6 +546,7 @@ group {
 
 		part {
 			name: "base";
+			mouse_events: 0;
 			type: IMAGE;
 			description {
 				state: "default" 0.0; //~ top
