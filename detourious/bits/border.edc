@@ -8,8 +8,6 @@
 		transition: ACCELERATE 0.2;				\
 		target: "e.text.title";					\
 		target: "border";						\
-		target: "border_color";					\
-		target: "border_color_post";			\
 		target: "button-close_bg";				\
 		target: "button-max_bg";				\
 		target: "button-min_bg";				\

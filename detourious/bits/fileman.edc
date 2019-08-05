@@ -322,7 +322,6 @@
 		target: "icon_box";									\
 		target: "icon_box_bg";								\
 		target: "icon_box_shadow";							\
-		target: "icon";										\
 		/*after: "thumb_gen2";*/							\
 	}														\
 	program {												\
@@ -1051,13 +1050,11 @@ group {
       program {
          signal: "e,toolbar,left"; source: "e";
          action: STATE_SET "tb_left" 0.0;
-         target: "e.swallow.toolbar";
          target: "region";
       }
       program {
          signal: "e,toolbar,right"; source: "e";
          action: STATE_SET "tb_right" 0.0;
-         target: "e.swallow.toolbar";
          target: "region";
       }
       program {
@@ -1426,7 +1423,7 @@ group { name: "e/fileman/default/scrollframe";
       program {
          signal: "mouse,down,1*"; source: "sb_vbar_a1";
          action: STATE_SET "clicked" 0.0;
-         target: "sb_vbar_a1";
+         //~ target: "sb_vbar_a1";
          target: "arrow1_vbar";
       }
       program {
@@ -1443,7 +1440,7 @@ group { name: "e/fileman/default/scrollframe";
       program {
          signal: "mouse,down,1*"; source: "sb_vbar_a2";
          action: STATE_SET "clicked" 0.0;
-         target: "sb_vbar_a2";
+         //~ target: "sb_vbar_a2";
          target: "arrow2_vbar";
       }
       program {
@@ -1580,7 +1577,7 @@ group { name: "e/fileman/default/scrollframe";
       program {
          signal: "mouse,down,1*"; source: "sb_hbar_a1";
          action: STATE_SET "clicked" 0.0;
-         target: "sb_hbar_a1";
+         //~ target: "sb_hbar_a1";
          target: "arrow1_hbar";
       }
       program {
@@ -1597,7 +1594,7 @@ group { name: "e/fileman/default/scrollframe";
       program {
          signal: "mouse,down,1*"; source: "sb_hbar_a2";
          action: STATE_SET "clicked" 0.0;
-         target: "sb_hbar_a2";
+         //~ target: "sb_hbar_a2";
          target: "arrow2_hbar";
       }
       program {
@@ -1972,7 +1969,7 @@ group { name: "e/fileman/default/scrollframe";
       program {
          signal: "mouse,down,1*"; source: "e.dragable.vbar";
          action: STATE_SET "clicked" 0.0;
-         target: "e.dragable.vbar";
+         //~ target: "e.dragable.vbar";
          target: "base_vbar";
          target: "center_vbar";
       }
@@ -1986,7 +1983,7 @@ group { name: "e/fileman/default/scrollframe";
       program {
          signal: "mouse,down,1*"; source: "e.dragable.hbar";
          action: STATE_SET "clicked" 0.0;
-         target: "e.dragable.hbar";
+         //~ target: "e.dragable.hbar";
          target: "base_hbar";
          target: "center_hbar";
       }

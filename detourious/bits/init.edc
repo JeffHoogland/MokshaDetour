@@ -97,6 +97,10 @@ group {
 					offset: -12 -30; 
 				}
 			}
+			description {
+				state: "active" 0.0;
+				color: 255 255 255 255;
+				}
 		}
 		part {	 
 			name: "e.text.title";
@@ -696,7 +700,7 @@ group {
 			source: "";
 			action: STATE_SET "active" 0.0;
 			target: "check";
-			target: "check_outline";
+			//~ target: "check_outline";
 		} 
 		program {
 			name: "disabled.initscreen"; 

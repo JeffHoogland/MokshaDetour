@@ -218,7 +218,7 @@ group {
             source: "e";
             action: STATE_SET "combo" 0.0;
             target: "e.swallow.icon";
-            target: "e.text.label";
+            //~ target: "e.text.label";
 		}
 		program {
             name:    "go_iconic";

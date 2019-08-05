@@ -375,7 +375,7 @@ group { name: "e/modules/ibar/menu/item";
       program {
          signal: "mouse,in"; source: "event";
          action: STATE_SET "focus" 0.0;
-         target: "e.swallow.icon";
+         //~ target: "e.swallow.icon";
          target: "base";
          target: "icon_clip";
          target: "glow";

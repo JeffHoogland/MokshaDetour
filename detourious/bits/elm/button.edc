@@ -1910,14 +1910,14 @@ group { name: "elm/button/base/media_player/prev/default";
          target: "bt2_bg";
          target: "bt2";
       }
-      program {
-         signal: "elm,anim,activate"; source: "elm";
-         action: STATE_SET "clicked" 0.0;
-         target: "bt";
-         target: "bt2_bg";
-         target: "bt2";
-         after: "button_unpressed_anim";
-      }
+      //~ program {
+         //~ signal: "elm,anim,activate"; source: "elm";
+         //~ action: STATE_SET "clicked" 0.0;
+         //~ target: "bt";
+         //~ target: "bt2_bg";
+         //~ target: "bt2";
+         //~ after: "button_unpressed_anim";
+      //~ }
       program { name:   "button_unpressed_anim";
          action: STATE_SET "default" 0.0;
          in: 0.5 0.0;

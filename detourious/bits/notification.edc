@@ -245,7 +245,7 @@ group {
             source: "notification";
             action: STATE_SET "hidden" 0.0;
             target: "clipper_app_icon";
-            target: "base";
+            //~ target: "base";
             after: "notification,new,2";
 		}
 		program {

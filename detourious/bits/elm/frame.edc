@@ -110,7 +110,7 @@ group { name: "elm/frame/base/default";
       }
       program { name: "collapse";
          action:  STATE_SET "collapsed" 0.0;
-         target: "base";
+         //~ target: "base";
          target: "elm.swallow.content";
          transition: LINEAR 0.1;
          after: "signal";
