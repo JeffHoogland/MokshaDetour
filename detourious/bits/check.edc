@@ -734,7 +734,7 @@ group {
 			source: "e";
 			action: STATE_SET "disabled" 0.0;
 			target: "base";
-			target: "checked";
+			//~ target: "checked";
 			target: "shadow";
 			target: "icon_clip";
 			target: "e.text.label";

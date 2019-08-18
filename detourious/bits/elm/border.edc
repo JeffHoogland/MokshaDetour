@@ -623,9 +623,9 @@ group { name: "elm/ews/decoration/default";
 			action: STATE_SET "max" 0.0;
 			target: "e.event.maximize_1";
 			target: "e.event.maximize_2";
-			target: "e.event.resize.bl";
-			target: "e.event.resize.b";
-			target: "e.event.resize.br";
+			//~ target: "e.event.resize.bl";
+			//~ target: "e.event.resize.b";
+			//~ target: "e.event.resize.br";
 		}
 		program {
 			signal: "elm,state,maximized,off"; source: "elm";
@@ -849,11 +849,11 @@ group { name: "elm/border/base/default";
 			action: STATE_SET "default" 0.0;
 			target: "button-max";
 		}
-		program {
-			signal: "mouse,down,*"; source: "e.event.minimize";
-			action: STATE_SET "selected" 0.0;
-			target: "button-min";
-		}
+		//~ program {
+			//~ signal: "mouse,down,*"; source: "e.event.minimize";
+			//~ action: STATE_SET "selected" 0.0;
+			//~ target: "button-min";
+		//~ }
 		program {
 			signal: "mouse,up,*"; source: "e.event.minimize";
 			action: STATE_SET "default" 0.0;
