@@ -124,7 +124,7 @@ group {
 				}
 				rel2 { 
 					relative: 1.0 1.0; 
-					offset: -4 -3; 
+					offset: 0 0; 
 				}
 			}
 			description {

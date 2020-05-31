@@ -44,6 +44,7 @@ data {
 	item: "theme/license"	"BSD Artistic License";
 	item: "gtk-theme"       "detourious";
 	item: "version"         "110";
+	item: "icon-theme"      "Icons-Moksha-Detour";
 }
 #else
 data {
