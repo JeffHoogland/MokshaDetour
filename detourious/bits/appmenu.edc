@@ -1,5 +1,5 @@
 group { name: "e/modules/appmenu/item";
-   images.image: "vgrad_med_dark.png" COMP;
+   images.image: "images/vgrad_med_dark.png" COMP;
    data.item: "padding_horizontal" "5";
    data.item: "padding_vertical" "5";
    parts {

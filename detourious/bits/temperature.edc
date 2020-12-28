@@ -1,12 +1,12 @@
 group { name: "e/modules/temperature/main";
    //~ temperature 
-	images.image: "images/temperature-base.png" COMP;
-	images.image: "images/temperature-0.png" COMP;
-	images.image: "images/temperature-20.png" COMP;
-	images.image: "images/temperature-40.png" COMP;
-	images.image: "images/temperature-60.png" COMP;
-	images.image: "images/temperature-80.png" COMP;
-	images.image: "images/temperature-100.png" COMP;
+	//~ images.image: "images/temperature-base.png" COMP;
+	//~ images.image: "images/temperature-0.png" COMP;
+	//~ images.image: "images/temperature-20.png" COMP;
+	//~ images.image: "images/temperature-40.png" COMP;
+	//~ images.image: "images/temperature-60.png" COMP;
+	//~ images.image: "images/temperature-80.png" COMP;
+	//~ images.image: "images/temperature-100.png" COMP;
 	images.image: "images/therm_content_high.png" COMP;
 	images.image: "images/therm_content.png" COMP;
 	images.image: "images/therm_shadow.png" COMP;
