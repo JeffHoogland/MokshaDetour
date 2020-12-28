@@ -76,9 +76,6 @@ group { name: "elm/scroller/entry/default";
 }
 
 group { name: "elm/scroller/entry_single/default";
-   images.image: "images/elm/sl_bt2_2.png" COMP;
-
-   
    data.item: "focus_highlight" "on";
    
    parts {

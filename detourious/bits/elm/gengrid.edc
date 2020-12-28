@@ -825,6 +825,7 @@ group {
             }
       }
       part {
+            name: "unknown";
             type: RECT;
             mouse_events: 1;
 
@@ -838,20 +839,16 @@ group {
             name: right;
             signal: "show";
             source: "";
-
             action: STATE_SET default 1.0;
             transition: SINUSOIDAL 4.0;
-            target: excessive.text;
-
+            target: "excessive.text";
             after: left;
       }
       program {
             name: left;
-
             action: STATE_SET default 0.0;
             transition: SINUSOIDAL 4.0;
-            target: excessive.text;
-
+            target: "excessive.text";
             after: right;
       }
    }

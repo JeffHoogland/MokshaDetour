@@ -230,7 +230,7 @@
             image: "images/elm/enjoy/main.png" COMP;
             image: "images/elm/enjoy/menu_separation.png" COMP;
             image: "images/elm/enjoy/base.png" COMP;
-            image: "images/elm/enjoy/bottom_bg.png" COMP;
+            //~ image: "images/elm/enjoy/bottom_bg.png" COMP;
             image: "images/elm/enjoy/sound_max.png" COMP;
             image: "images/elm/enjoy/sound_min.png" COMP;
             image: "images/elm/enjoy/sound_mute.png" COMP;
