@@ -670,7 +670,7 @@ group {
 	alias: "e/widgets/border/internal_fileman/border";
 	alias: "e/widgets/border/shaped/border";
 	BORDER_DATA;
-	data.item: "shadow" "1";
+	data.item: "shaped" "1";
 
     parts {
 		BORDER_SHADOW();
