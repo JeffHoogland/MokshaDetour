@@ -670,7 +670,7 @@ group {
 	alias: "e/widgets/border/internal_fileman/border";
 	alias: "e/widgets/border/shaped/border";
 	BORDER_DATA;
-	data.item: "shaped" "1";
+	//~ data.item: "shaped" "1";
 
     parts {
 		BORDER_SHADOW();
@@ -711,7 +711,7 @@ group {
     alias: "e/widgets/border/noresize/border";
     alias: "e/widgets/border/modal/border";
     BORDER_DATA;
-	data.item: "shadow" "1";
+	//~ data.item: "shaped" "1";
 	
 	parts {
 		BORDER_SHADOW();
@@ -741,7 +741,7 @@ group {
 
 group { name: "e/widgets/border/sparkle/border";
     BORDER_DATA;
-	data.item: "shadow" "1";
+	//~ data.item: "shaped" "1";
 	images.image: "images/window-border1.png" COMP;
     parts {
 		BORDER_SHADOW();
@@ -805,7 +805,7 @@ group { name: "e/widgets/border/sparkle/border";
 
 group {
     name: "e/widgets/border/square/border";
-	data.item: "shadow" "1";
+	  //~ data.item: "shaped" "1";
     parts {
 		BORDER_SHADOW();
 		BORDER_COLOR("images/window-border-squarec.png", 2 2 23 1, 24 23);
@@ -854,7 +854,7 @@ group {
     name: "e/widgets/border/glass/border";
 
 	BORDER_DATA;
-	data.item: "shadow" "1";
+	  //~ data.item: "shaped" "1";
     parts {
 		part {
             name: "border_color";
@@ -989,7 +989,7 @@ BORDER_MENU_BUTTON("properties", "gtk-edit");
 #undef BORDER_SHADOW
 #undef BORDER_CLIENT
 #undef BORDER_TITLE
-#undef BORDER_DATA
+//~ #undef BORDER_DATA
 #undef COLORIZE
 #undef COLORIZE_ACTIVE
 #undef COLORIZE_BUTTONS
